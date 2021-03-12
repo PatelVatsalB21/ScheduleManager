@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popUpDialog_lin_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#4DFFFFFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/PopUpDialog_Head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/write_your_instant_note_Pop_Up_Dialog"
+        android:textColor="@color/color_yellow"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/PopUpDialog_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title_Pop_Up_Dialog"
+        android:clickable="true"
+        android:cursorVisible="true"
+        android:textColor="@color/color_yellow"
+        android:textColorHint="@color/color_yellow"
+        android:fontFamily="@font/poppins_medium"/>
+
+    <EditText
+        android:id="@+id/PopUpDialog_Desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/description_Pop_Up_Dialog"
+        android:clickable="true"
+        android:cursorVisible="true"
+        android:textColor="@color/color_yellow"
+        android:textColorHint="@color/color_yellow"
+        android:fontFamily="@font/poppins_medium" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/PopUpDialog_Dismiss_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/dismiss_Pop_Up_Dialog"
+            android:textColor="@color/color_yellow"
+            android:fontFamily="@font/poppins_semibold"/>
+
+        <Button
+            android:id="@+id/PopUpDialog_Save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/save_Pop_Up_Dialog"
+            android:textColor="@color/color_yellow"
+            android:fontFamily="@font/poppins_semibold"/>
+    </LinearLayout>
+
+</LinearLayout>

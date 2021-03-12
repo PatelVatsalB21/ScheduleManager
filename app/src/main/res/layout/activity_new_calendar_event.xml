@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calendar.NewCalendarEvent">
+
+    <EditText
+        android:id="@+id/New_Event_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="25dp"
+        android:hint="Title"/>
+
+    <EditText
+        android:id="@+id/New_Event_Desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/New_Event_Title"
+        android:layout_margin="25dp"
+        android:hint="Description"/>
+
+    <EditText
+        android:id="@+id/New_Event_Date_Indicator"
+        android:hint="This will display Event's Current Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/New_Event_Desc"
+        android:layout_margin="25dp"/>
+
+    <DatePicker
+        android:id="@+id/New_Event_DatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+    <EditText
+        android:id="@+id/New_Event_Time_Indicator"
+        android:layout_below="@id/New_Event_Date_Indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="This will display Event's Current Time"
+        android:layout_margin="25dp"/>
+
+    <TimePicker
+        android:id="@+id/New_Event_TimePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/New_Event_Save_btn"
+        android:layout_below="@id/New_Event_Time_Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="25dp"/>
+
+    <Button
+        android:id="@+id/New_Event_Cancel_btn"
+        android:layout_below="@id/New_Event_Time_Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="50dp"/>
+
+</RelativeLayout>

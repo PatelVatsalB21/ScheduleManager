@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/note_layout_card"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardElevation="2dp"
+    android:layout_margin="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/recyclerview_item_outline">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_note_layout_rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:layout_toStartOf="@id/note_layout_menu_btn_lin_layout"
+            android:layout_toLeftOf="@id/note_layout_menu_btn_lin_layout">
+
+            <!--        <RelativeLayout-->
+            <!--            android:id="@+id/new_note_rel_layout_1"-->
+            <!--            android:layout_width="350dp"-->
+            <!--            android:layout_height="wrap_content">-->
+
+            <TextView
+                android:id="@+id/note_layout_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="Time"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:paddingTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingStart="16dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/note_layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:linksClickable="false"
+                android:maxLength="40"
+                android:maxLines="3"
+                android:padding="16dp"
+                android:text="Title"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/note_layout_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/note_layout_title"
+                android:autoLink="all"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:linksClickable="false"
+                android:maxLength="100"
+                android:maxLines="5"
+                android:padding="16dp"
+                android:text="Desc"
+                android:textColor="@color/colorPrimaryDark" />
+            <!--        </RelativeLayout>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/note_layout_menu_btn_lin_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/note_layout_menu_btn"
+                android:layout_width="20pt"
+                android:layout_height="20pt"
+                android:layout_marginTop="7pt"
+                android:layout_marginRight="2pt"
+                android:background="@android:color/transparent"
+                android:paddingStart="5pt"
+                android:paddingTop="2pt"
+                android:paddingEnd="5pt"
+                android:paddingBottom="5pt"
+                android:src="@drawable/ic_menu"
+                android:tint="@color/colorPrimaryDark" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/relativeLayout"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="top|end"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/new_note_rel_layout_1"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/view1">-->
+
+    <!--            <com.google.android.material.appbar.AppBarLayout-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content">-->
+
+    <!--            </com.google.android.material.appbar.AppBarLayout>-->
+
+
+    <!--            <androidx.appcompat.widget.Toolbar-->
+    <!--                android:id="@+id/new_note_toolbar"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="35dp"-->
+    <!--                app:menu="@menu/note_layout_menu"-->
+    <!--                tools:layout_editor_absoluteX="334dp"-->
+    <!--                tools:layout_editor_absoluteY="10dp" />-->
+    <!--        </RelativeLayout>-->
+
+
+
+</com.google.android.material.card.MaterialCardView>

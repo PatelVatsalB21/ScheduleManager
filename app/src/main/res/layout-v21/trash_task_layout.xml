@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/trash_task_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/recyclerview_item_outline">
+
+    <RelativeLayout
+        android:id="@+id/trash_task_card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@color/taskDullBG"
+        >
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/task_layout_checkBox_layout"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="110dp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentLeft="true">-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/task_layout_checkBox"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:button="@null"-->
+<!--            android:background="?android:attr/listChoiceIndicatorMultiple"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:backgroundTint="@color/colorPrimaryDark"-->
+<!--            />-->
+
+<!--        </RelativeLayout>-->
+
+        <LinearLayout
+            android:id="@+id/trash_task_layout_Main_Lin_Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@id/trash_task_layout_Lottie_Lin_Layout"
+            android:layout_toLeftOf="@id/trash_task_layout_Lottie_Lin_Layout"
+            android:layout_margin="10dp">
+
+            <!--        <RelativeLayout-->
+            <!--            android:id="@+id/new_note_rel_layout_1"-->
+            <!--            android:layout_width="350dp"-->
+            <!--            android:layout_height="wrap_content">-->
+
+            <TextView
+                android:id="@+id/trash_task_time_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:paddingTop="10dp"
+                android:paddingBottom="16dp"
+                android:text="Time"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:id="@+id/trash_task_title_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="Title"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:maxLength="40"
+                android:layout_marginTop="10dp"/>
+
+<!--            <TextView-->
+<!--                android:id="@+id/task_desc_layout"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/head1"-->
+<!--                android:fontFamily="@font/poppins_medium"-->
+<!--                android:includeFontPadding="false"-->
+<!--                android:maxLines="3"-->
+<!--                android:padding="16dp"-->
+<!--                android:text="Random Text"-->
+<!--                android:textColor="@color/colorPrimaryDark"-->
+<!--                android:autoLink="all"/>-->
+            <!--        </RelativeLayout>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/trash_task_layout_Lottie_Lin_Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/All_In_One_Email_Icon"-->
+            <!--                android:layout_marginTop="7pt"-->
+            <!--                android:layout_marginRight="2pt"-->
+            <!--                android:layout_width="30pt"-->
+            <!--                android:layout_height="30pt"-->
+            <!--                android:src="@drawable/ic_email"-->
+            <!--                android:background="@color/colorPrimary"-->
+            <!--                android:paddingTop="2pt"-->
+            <!--                android:paddingBottom="5pt"-->
+            <!--                android:paddingStart="5pt"-->
+            <!--                android:paddingEnd="5pt"-->
+            <!--                android:layout_gravity="center"/>-->
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/trash_task_layout_lottie_view"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/trash_task_layout_weekDays_lin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/trash_task_layout_Lottie_Lin_Layout"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+
+            <ToggleButton
+                android:id="@+id/trash_task_layout_sun"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="MON"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="S"
+                android:textOn="S"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+            <ToggleButton
+                android:id="@+id/trash_task_layout_mon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="M"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="M"
+                android:textOn="M"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+            <ToggleButton
+                android:id="@+id/trash_task_layout_tue"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="T"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="T"
+                android:textOn="T"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+            <ToggleButton
+                android:id="@+id/trash_task_layout_wed"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="W"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="W"
+                android:textOn="W"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+            <ToggleButton
+                android:id="@+id/trash_task_layout_thu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="T"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="T"
+                android:textOn="T"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+            <ToggleButton
+                android:id="@+id/trash_task_layout_fri"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="F"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="F"
+                android:textOn="F"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+            <ToggleButton
+                android:id="@+id/trash_task_layout_sat"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="S"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="S"
+                android:textOn="S"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/relativeLayout"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="top|end"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/new_note_rel_layout_1"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/view1">-->
+
+    <!--            <com.google.android.material.appbar.AppBarLayout-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content">-->
+
+    <!--            </com.google.android.material.appbar.AppBarLayout>-->
+
+
+    <!--            <androidx.appcompat.widget.Toolbar-->
+    <!--                android:id="@+id/new_note_toolbar"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="35dp"-->
+    <!--                app:menu="@menu/note_layout_menu"-->
+    <!--                tools:layout_editor_absoluteX="334dp"-->
+    <!--                tools:layout_editor_absoluteY="10dp" />-->
+    <!--        </RelativeLayout>-->
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

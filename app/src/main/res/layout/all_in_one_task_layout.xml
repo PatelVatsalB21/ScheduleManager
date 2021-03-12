@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/All_In_One_Task_Card"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp"
+    android:background="@color/colorPrimary"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/All_In_One_Task_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:text="Date"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/recyclerview_item_outline"
+        android:layout_toEndOf="@id/All_In_One_Task_Date"
+        android:layout_toRightOf="@id/All_In_One_Task_Date"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/All_In_One_Task_Card_Semi_REL_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/Blue_new_bg"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/All_In_One_Task_Main_Lin_Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@id/All_In_One_Task_Lottie_Lin_Layout"
+            android:layout_toLeftOf="@id/All_In_One_Task_Lottie_Lin_Layout">
+
+            <!--        <RelativeLayout-->
+            <!--            android:id="@+id/new_note_rel_layout_1"-->
+            <!--            android:layout_width="350dp"-->
+            <!--            android:layout_height="wrap_content">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_gravity="top|start">-->
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/All_In_One_Task_Time"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Time"-->
+<!--                    android:includeFontPadding="false"-->
+<!--                    android:fontFamily="@font/poppins_medium"-->
+<!--                    android:textSize="16sp" />-->
+
+<!--            </LinearLayout>-->
+
+            <TextView
+                android:id="@+id/All_In_One_Task_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:text="Time"
+                android:textColor="@color/Blue_new_txt"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:id="@+id/All_In_One_Task_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:maxLength="40"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:text="Video call to client team"
+                android:textColor="@color/Blue_new_txt"
+                android:textSize="18sp" />
+
+            <!--            <TextView-->
+<!--                android:id="@+id/All_In_One_Task_Desc"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/head1"-->
+<!--                android:fontFamily="@font/poppins_medium"-->
+<!--                android:includeFontPadding="false"-->
+<!--                android:maxLines="3"-->
+<!--                android:padding="16dp"-->
+<!--                android:text="Random Text"-->
+<!--                android:autoLink="all"/>-->
+            <!--        </RelativeLayout>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/All_In_One_Task_Lottie_Lin_Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_alignParentEnd="true">
+
+<!--            <ImageView-->
+<!--                android:id="@+id/All_In_One_Email_Icon"-->
+<!--                android:layout_marginTop="7pt"-->
+<!--                android:layout_marginRight="2pt"-->
+<!--                android:layout_width="30pt"-->
+<!--                android:layout_height="30pt"-->
+<!--                android:src="@drawable/ic_email"-->
+<!--                android:background="@color/colorPrimary"-->
+<!--                android:paddingTop="2pt"-->
+<!--                android:paddingBottom="5pt"-->
+<!--                android:paddingStart="5pt"-->
+<!--                android:paddingEnd="5pt"-->
+<!--                android:layout_gravity="center"/>-->
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/All_In_One_Task_Lottie"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/All_In_One_task_layout_weekDays_lin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/All_In_One_Task_Main_Lin_Layout"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp">
+
+            <ToggleButton
+                android:id="@+id/All_In_One_task_layout_sun"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="@string/s_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="@string/s_weekDays_NewTask"
+                android:textOn="@string/s_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+            <ToggleButton
+                android:id="@+id/All_In_One_task_layout_mon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="@string/m_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="@string/m_weekDays_NewTask"
+                android:textOn="@string/m_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+            <ToggleButton
+                android:id="@+id/All_In_One_task_layout_tue"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="@string/t_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="@string/t_weekDays_NewTask"
+                android:textOn="@string/t_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+            <ToggleButton
+                android:id="@+id/All_In_One_task_layout_wed"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="@string/w_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="@string/w_weekDays_NewTask"
+                android:textOn="@string/w_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+            <ToggleButton
+                android:id="@+id/All_In_One_task_layout_thu"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="@string/t_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="@string/t_weekDays_NewTask"
+                android:textOn="@string/t_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+            <ToggleButton
+                android:id="@+id/All_In_One_task_layout_fri"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="@string/f_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="@string/f_weekDays_NewTask"
+                android:textOn="@string/f_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+            <ToggleButton
+                android:id="@+id/All_In_One_task_layout_sat"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state"
+                android:checked="false"
+                android:text="@string/s_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color"
+                android:textOff="@string/s_weekDays_NewTask"
+                android:textOn="@string/s_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:clickable="false"/>
+
+        </LinearLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/relativeLayout"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="top|end"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/new_note_rel_layout_1"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/view1">-->
+
+    <!--            <com.google.android.material.appbar.AppBarLayout-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content">-->
+
+    <!--            </com.google.android.material.appbar.AppBarLayout>-->
+
+
+    <!--            <androidx.appcompat.widget.Toolbar-->
+    <!--                android:id="@+id/new_note_toolbar"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="35dp"-->
+    <!--                app:menu="@menu/note_layout_menu"-->
+    <!--                tools:layout_editor_absoluteX="334dp"-->
+    <!--                tools:layout_editor_absoluteY="10dp" />-->
+    <!--        </RelativeLayout>-->
+    </RelativeLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

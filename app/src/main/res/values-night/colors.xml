@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_gray">#D5D5D5</color>
+    <color name="color_dark_gray">#B6B6B6</color>
+    <color name="color_light_white">#BFFFFFFF</color>
+    <color name="color_Primary_Dark_Light">#2954EF</color>
+
+    <color name="color1">#F1755B</color>
+    <color name="color2">#66DF67</color>
+    <color name="color3">#F66398</color>
+    <color name="color_yellow">#EEBE5C</color>
+    <color name="color5">#3799f4</color>
+    <color name="newColorAccent">#F2F2F2</color>
+    <color name="red">#AA0909</color>
+    <color name="colorBackground">#081C34</color>
+    <color name="cardview_dark">#062F45</color>
+    <color name="ic_note_icon_background">#FFFFFF</color>
+    <color name="ic_splash_screen">#FFFFFF</color>
+    <color name="dark">#02D5C8</color>
+
+    <color name="note_bg_color_1">#303D6E</color>
+    <color name="note_bg_color_2">#8F8849</color>
+    <color name="note_bg_color_3">#8F5B4A</color>
+    <color name="note_bg_color_4">#488844</color>
+    <color name="note_bg_color_5">#8F435D</color>
+    <color name="note_bg_color_6">#346777</color>
+    <color name="note_bg_color_7">#4A7F80</color>
+    <color name="note_bg_color_8">#000000</color>
+
+    <color name="lightblack">#302C2C</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#15499E</color>
+    <color name="colorFabs">#15499E</color>
+    <color name="colorInversePrimary">#FFFFFF</color>
+    <color name="HeaderGradientMidColor">#091935</color>
+    <color name="NavGradientBottomColor">#0E2957</color>
+    <color name="topHomePage">#66393535</color>
+
+    <color name="SuccessBG">#346837</color>
+    <color name="taskDullBG">#243239</color>
+    <color name="taskBG">#000000</color>
+    <color name="emailBG">#000000</color>
+
+    <color name="Blue_new_bg">#7F9EAC</color>
+    <color name="Blue_new_dull_bg">#698D9E</color>
+    <color name="Blue_new_txt">#3EC5FF</color>
+    <color name="Blue_new_dull_txt">#349ECC</color>
+    <color name="Violet_bg">#767B97</color>
+
+
+
+</resources>

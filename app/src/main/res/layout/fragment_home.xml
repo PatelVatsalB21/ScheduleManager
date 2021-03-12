@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/Fragment_home_lin_layout"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="50dp">-->
+
+    <!--        <ImageButton-->
+    <!--            android:layout_width="40dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginLeft="270dp"-->
+    <!--            android:background="@color/colorPrimary"-->
+    <!--            android:src="@drawable/ic_add_home_fragment" />-->
+
+    <!--        <ImageButton-->
+    <!--            android:layout_width="40dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:layout_marginRight="40dp"-->
+    <!--            android:background="@color/colorPrimary"-->
+    <!--            android:src="@drawable/ic_edit" />-->
+
+    <!--    </LinearLayout>-->
+    <RelativeLayout
+        android:id="@+id/No_items_Home_View_Rel_Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/frag_home_null_view_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/null_view_all_in_one"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/no_tasks_or_scheduled_email_FragmentHome"
+            android:textSize="19sp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_below="@id/frag_home_null_view_image"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/Fragment_Home_swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Fragment_Home_Rec_View"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="95dp"
+            android:clipToPadding="false"/>
+        <!--        <TextView-->
+        <!--            android:id="@+id/NullFrag1View"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:text="Empty Frag Home"-->
+        <!--            android:gravity="center"-->
+        <!--            android:textColor="@color/colorPrimary"-->
+        <!--            android:backgroundTint="@color/colorPrimaryDark"-->
+        <!--            android:visibility="visible"/>-->
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <!--    <com.google.android.material.card.MaterialCardView-->
+    <!--        android:id="@+id/NewTaskCard"-->
+    <!--        android:layout_width="300dp"-->
+    <!--        android:layout_height="300dp"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:animateLayoutChanges="true"-->
+    <!--        android:clickable="true"-->
+    <!--        android:elevation="20dp"-->
+    <!--        android:focusable="true"-->
+    <!--        android:visibility="visible"-->
+    <!--        app:cardBackgroundColor="@color/colorPrimaryDark"-->
+    <!--        app:cardCornerRadius="25dp">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <!--            <ImageButton-->
+    <!--                android:id="@+id/NewTaskCard_new_note"-->
+    <!--                android:layout_width="40dp"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:layout_marginLeft="20dp"-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                android:src="@mipmap/ic_note_icon" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/NewTaskCard_new_note_text"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/NewTaskCard_new_note"-->
+    <!--                android:layout_marginLeft="15dp"-->
+    <!--                android:layout_marginTop="5dp"-->
+    <!--                android:text="New Task"-->
+    <!--                android:textColor="@color/colorPrimary"-->
+    <!--                android:textSize="12sp" />-->
+
+    <!--            <ImageButton-->
+    <!--                android:id="@+id/NewTaskCard_new_email"-->
+    <!--                android:layout_width="40dp"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:layout_marginLeft="40dp"-->
+    <!--                android:layout_marginTop="18dp"-->
+    <!--                android:layout_marginBottom="10dp"-->
+    <!--                android:layout_toRightOf="@id/NewTaskCard_new_note"-->
+    <!--                android:src="@drawable/ic_email" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/NewTaskCard_new_email_text"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/NewTaskCard_new_note"-->
+    <!--                android:layout_marginLeft="30dp"-->
+    <!--                android:layout_marginTop="5dp"-->
+    <!--                android:layout_toRightOf="@id/NewTaskCard_new_note_text"-->
+    <!--                android:text="New Email"-->
+    <!--                android:textColor="@color/colorPrimary"-->
+    <!--                android:textSize="12sp" />-->
+
+
+    <!--        </RelativeLayout>-->
+
+    <!--    </com.google.android.material.card.MaterialCardView>-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_alignParentEnd="true">-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/fab_home_frag"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginRight="15dp"-->
+<!--            android:layout_marginBottom="15dp"-->
+<!--            android:elevation="10dp"-->
+<!--            android:src="@drawable/ic_add"-->
+<!--            android:visibility="visible"-->
+<!--            app:rippleColor="@color/color1"-->
+<!--            android:layout_marginEnd="15dp"-->
+<!--            android:layout_alignParentEnd="true" />-->
+<!--        &lt;!&ndash;        android:background="@color/colorPrimaryDark"&ndash;&gt;-->
+
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/fab1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_above="@id/fab_home_frag"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:elevation="10dp"-->
+<!--            android:src="@drawable/ic_email"-->
+<!--            app:fabSize="mini"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginEnd="20dp" />-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/fab2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_above="@id/fab1"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:elevation="10dp"-->
+<!--            android:src="@drawable/ic_edit"-->
+<!--            app:fabSize="mini"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginEnd="20dp" />-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/fab3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_above="@id/fab2"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:elevation="10dp"-->
+<!--            android:src="@mipmap/ic_task"-->
+<!--            app:fabSize="mini"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginEnd="20dp" />-->
+<!--        &lt;!&ndash;    <com.google.android.material.floatingactionbutton.FloatingActionButton&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:id="@+id/fab4"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;        app:fabSize="mini"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_alignParentRight="true"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_above="@id/fab3"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_marginRight="15dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_marginBottom="10dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:elevation="10dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:src="@drawable/ic_add"/>&ndash;&gt;-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/fab1_txt_view"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_above="@id/fab_home_frag"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            android:layout_toStartOf="@id/fab1"-->
+<!--            android:layout_toLeftOf="@id/fab1"-->
+<!--            android:background="@color/colorPrimaryDark"-->
+<!--            android:text="@string/add_email_FragmentHome"-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:layout_marginEnd="5dp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/fab2_txt_view"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_above="@id/fab1"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            android:layout_toStartOf="@id/fab2"-->
+<!--            android:layout_toLeftOf="@id/fab2"-->
+<!--            android:background="@color/colorPrimaryDark"-->
+<!--            android:text="@string/add_note_FragmentHome"-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:layout_marginEnd="5dp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/fab3_txt_view"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_above="@id/fab2"-->
+<!--            android:layout_marginEnd="5dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            android:layout_toStartOf="@id/fab3"-->
+<!--            android:layout_toLeftOf="@id/fab2"-->
+<!--            android:background="@color/colorPrimaryDark"-->
+<!--            android:text="@string/add_task_FragmentHome"-->
+<!--            android:textColor="@color/colorPrimary" />-->
+
+<!--    </RelativeLayout>-->
+
+    <!--    <TextView-->
+    <!--    android:id="@+id/fab4_txt_view"-->
+    <!--    android:layout_toStartOf="@id/fab4"-->
+    <!--    android:layout_above="@id/fab3"-->
+    <!--    android:layout_marginBottom="25dp"-->
+    <!--    android:layout_marginRight="5dp"-->
+    <!--    android:layout_width="wrap_content"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:hint="Add Event"-->
+    <!--    android:background="@color/color_light_white"-->
+    <!--    android:textColor="@color/colorPrimaryDark"-->
+    <!--    android:layout_toLeftOf="@id/fab4" />-->
+
+
+</RelativeLayout>
+

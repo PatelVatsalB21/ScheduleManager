@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/quicknote_text_color_dialog_head_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select text color for \n quick note window"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+        <RadioButton
+            android:id="@+id/quicknote_text_color_radio_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yellow"
+            android:textSize="18sp"
+            android:textColor="@color/color_yellow"
+            android:fontFamily="@font/poppins_semibold"
+            android:buttonTint="@color/color_yellow"
+            android:layoutDirection="rtl"
+            android:layout_below="@id/quicknote_text_color_dialog_head_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"/>
+
+    <RadioButton
+        android:id="@+id/quicknote_text_color_radio_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Black"
+        android:textSize="18sp"
+        android:textColor="@color/colorInversePrimary"
+        android:fontFamily="@font/poppins_semibold"
+        android:buttonTint="@color/colorInversePrimary"
+        android:layoutDirection="rtl"
+        android:layout_below="@id/quicknote_text_color_radio_1"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
+
+    <RadioButton
+        android:id="@+id/quicknote_text_color_radio_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gray"
+        android:textSize="18sp"
+        android:textColor="@color/color_gray"
+        android:fontFamily="@font/poppins_semibold"
+        android:buttonTint="@color/color_dark_gray"
+        android:layoutDirection="rtl"
+        android:layout_below="@id/quicknote_text_color_radio_2"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/quicknote_text_color_close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/poppins_medium"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/quicknote_text_color_radio_3"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>

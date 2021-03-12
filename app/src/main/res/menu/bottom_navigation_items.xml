@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+      android:id="@+id/HomeBottomNavBtn"
+      android:title="Home"
+      android:icon="@drawable/ic_home_selected"
+      android:iconTint="@color/color_light_white"
+      app:showAsAction="always" />
+
+  <item
+      android:id="@+id/TaskBottomNavBtn"
+      android:title="Tasks"
+      android:icon="@mipmap/ic_task"
+      app:showAsAction="always"/>
+
+  <item
+      android:id="@+id/NotesBottomNavBtn"
+      android:title="Notes"
+      android:icon="@drawable/ic_edit"
+      app:showAsAction="always"/>
+
+  <item
+      android:id="@+id/EmailBottomNavBtn"
+      android:title="Emails"
+      android:icon="@mipmap/ic_notes_round"
+      app:showAsAction="always"/>
+</menu>

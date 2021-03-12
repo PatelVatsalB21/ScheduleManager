@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:elevation="50dp"
+        app:cardCornerRadius="70dp"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/email_changeView_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimaryDark"
+                android:text="Show TimePicker"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <!--            <Switch-->
+            <!--                android:id="@+id/email_reminder_priority"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="20pt"-->
+            <!--                android:text="Set As Priority"-->
+            <!--                android:textSize="8pt"-->
+            <!--                android:layout_marginTop="10pt"-->
+            <!--                android:textColor="@color/colorPrimaryDark"-->
+            <!--                android:layout_below="@id/email_reminder_btn"-->
+            <!--                android:layout_centerHorizontal="true" />-->
+
+
+            <Button
+                android:id="@+id/email_save_calender_detail_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:textColor="@color/colorPrimaryDark"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20pt"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:id="@+id/email_cancel_alarm_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="@color/colorPrimaryDark"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20pt"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

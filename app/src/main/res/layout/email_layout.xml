@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/recyclerview_item_outline">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/email_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            app:cardBackgroundColor="@color/Violet_bg"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/email_layout_thumbnail_lin_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60pt"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/email_layout_thumbnail_img_view"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/email_layout_main_lin_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/email_layout_menu_btn_layout"
+                    android:layout_toLeftOf="@id/email_layout_menu_btn_layout"
+                    android:layout_toEndOf="@id/email_layout_thumbnail_lin_layout"
+                    android:layout_toRightOf="@id/email_layout_thumbnail_lin_layout"
+                    android:orientation="vertical">
+                    <!--        <RelativeLayout-->
+                    <!--            android:id="@+id/new_note_rel_layout_1"-->
+                    <!--            android:layout_width="350dp"-->
+                    <!--            android:layout_height="wrap_content">-->
+
+                    <TextView
+                        android:id="@+id/email_layout_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|start"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="Time"
+                        android:textColor="@color/Violet_new_txt"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/email_layout_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:includeFontPadding="false"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="Subject"
+                        android:textColor="@color/Violet_new_txt"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/email_layout_subject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="all"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:maxLength="50"
+                        android:maxLines="3"
+                        android:padding="16dp"
+                        android:text="Message"
+                        android:textColor="@color/Violet_new_txt" />
+                    <!--        </RelativeLayout>-->
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/email_layout_menu_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+
+                    <ImageButton
+                        android:id="@+id/email_layout_menu_btn"
+                        android:layout_width="20pt"
+                        android:layout_height="20pt"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="7pt"
+                        android:layout_marginRight="2pt"
+                        android:background="@color/emailBG"
+                        android:paddingStart="5pt"
+                        android:paddingTop="2pt"
+                        android:paddingEnd="5pt"
+                        android:paddingBottom="5pt"
+                        android:src="@drawable/ic_menu"
+                        android:tint="@color/Violet_new_txt" />
+
+                    <ImageView
+                        android:id="@+id/email_layout_status_indicator_view"
+                        android:layout_width="20pt"
+                        android:layout_height="20pt"
+                        android:layout_below="@id/email_layout_menu_btn"
+                        android:layout_marginTop="25dp" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!--        <RelativeLayout-->
+        <!--            android:id="@+id/relativeLayout"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="top|end"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/new_note_rel_layout_1"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/view1">-->
+
+        <!--            <com.google.android.material.appbar.AppBarLayout-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content">-->
+
+        <!--            </com.google.android.material.appbar.AppBarLayout>-->
+
+
+        <!--            <androidx.appcompat.widget.Toolbar-->
+        <!--                android:id="@+id/new_note_toolbar"-->
+        <!--                android:layout_width="30dp"-->
+        <!--                android:layout_height="35dp"-->
+        <!--                app:menu="@menu/note_layout_menu"-->
+        <!--                tools:layout_editor_absoluteX="334dp"-->
+        <!--                tools:layout_editor_absoluteY="10dp" />-->
+        <!--        </RelativeLayout>-->
+
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

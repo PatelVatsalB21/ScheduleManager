@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/note_link_dialog_url_txt_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+    <Button
+        android:id="@+id/note_link_dialog_edit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/note_link_dialog_open_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@android:color/transparent"/>
+
+</RelativeLayout>

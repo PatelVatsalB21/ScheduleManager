@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:background="@drawable/header_nav_gradient"
+    android:paddingLeft="15dp"
+    android:paddingStart="15dp">
+
+    <ImageView
+        android:id="@+id/header_nav_thumbnail_img_view"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp" />
+
+    <TextView
+        android:id="@+id/header_nav_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/colorInversePrimary"
+        android:textSize="30sp"
+        android:maxLength="20"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_below="@id/header_nav_thumbnail_img_view"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="10dp" />
+
+    <ImageButton
+        android:id="@+id/header_nav_edit_profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+        android:tint="#FFFFFF"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:padding="15dp"/>
+
+</RelativeLayout>

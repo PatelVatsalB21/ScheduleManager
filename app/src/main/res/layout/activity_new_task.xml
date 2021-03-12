@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Task.NewTask">
+
+<!--    <View-->
+<!--        android:id="@+id/new_task_animation_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/colorPrimary"/>-->
+    <RelativeLayout
+        android:id="@+id/new_task_appBar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <ImageButton
+            android:id="@+id/new_task_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorPrimaryDark"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Task"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/new_task_back_btn"
+            android:layout_toRightOf="@id/new_task_back_btn"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/new_task_main_rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/new_task_appBar_layout"
+        android:layout_margin="15dp">
+
+    <EditText
+        android:id="@+id/new_task_input_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title_NewTask"
+        android:maxLines="3"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="18sp"
+        android:textColor="@color/colorInversePrimary"
+        android:background="@android:color/transparent"/>
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/new_task_input_desc"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/new_task_input_title"-->
+<!--        android:layout_marginTop="20pt"-->
+<!--        android:hint="Description" />-->
+
+    <RelativeLayout
+        android:id="@+id/new_task_calendar_rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_task_input_title"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/new_task_date_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/new_task_calendar_show_btn"
+            android:hint="@string/date_NewTask"
+            android:textSize="18sp"
+            android:textColor="@color/colorInversePrimary"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/new_task_calendar_show_btn" />
+
+        <Button
+            android:id="@+id/new_task_calendar_show_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/show_calendar_btn_NewTask"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/new_task_timePicker_rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_task_calendar_rel_layout"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/new_task_time_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/new_task_timePicker_show_btn"
+            android:layout_toLeftOf="@id/new_task_timePicker_show_btn"
+            android:hint="@string/time_NewTask"
+            android:textColor="@color/colorInversePrimary"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/new_task_timePicker_show_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/show_clock_btn_NewTask"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/new_task_repeat_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repeat"
+            android:scaleY="1.50"
+            android:scaleX="1.50"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/new_task_timePicker_rel_layout"/>
+
+
+        <LinearLayout
+            android:id="@+id/new_task_weekDays_lin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/new_task_repeat_checkBox"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ToggleButton
+                android:id="@+id/new_task_layout_sun"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state_activity"
+                android:checked="false"
+                android:text="@string/s_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color_activity"
+                android:fontFamily="@font/poppins_semibold"
+                android:textOff="@string/s_weekDays_NewTask"
+                android:textOn="@string/s_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <ToggleButton
+                android:id="@+id/new_task_layout_mon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state_activity"
+                android:checked="false"
+                android:text="@string/m_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color_activity"
+                android:fontFamily="@font/poppins_semibold"
+                android:textOff="@string/m_weekDays_NewTask"
+                android:textOn="@string/m_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <ToggleButton
+                android:id="@+id/new_task_layout_tue"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state_activity"
+                android:checked="false"
+                android:text="@string/t_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color_activity"
+                android:fontFamily="@font/poppins_semibold"
+                android:textOff="@string/t_weekDays_NewTask"
+                android:textOn="@string/t_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <ToggleButton
+                android:id="@+id/new_task_layout_wed"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state_activity"
+                android:checked="false"
+                android:text="@string/w_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color_activity"
+                android:fontFamily="@font/poppins_semibold"
+                android:textOff="@string/w_weekDays_NewTask"
+                android:textOn="@string/w_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <ToggleButton
+                android:id="@+id/new_task_layout_thu"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state_activity"
+                android:checked="false"
+                android:text="@string/t_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color_activity"
+                android:fontFamily="@font/poppins_semibold"
+                android:textOff="@string/t_weekDays_NewTask"
+                android:textOn="@string/t_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <ToggleButton
+                android:id="@+id/new_task_layout_fri"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state_activity"
+                android:checked="false"
+                android:text="@string/f_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color_activity"
+                android:fontFamily="@font/poppins_semibold"
+                android:textOff="@string/f_weekDays_NewTask"
+                android:textOn="@string/f_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+            <ToggleButton
+                android:id="@+id/new_task_layout_sat"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/days_of_week_state_activity"
+                android:checked="false"
+                android:text="@string/s_weekDays_NewTask"
+                android:textColor="@drawable/days_of_week_text_color_activity"
+                android:fontFamily="@font/poppins_semibold"
+                android:textOff="@string/s_weekDays_NewTask"
+                android:textOn="@string/s_weekDays_NewTask"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_task_weekDays_lin_layout">
+
+        <TextView
+            android:id="@+id/new_task_category_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/select_type_of_task_NewTask"
+            android:textSize="22sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <Spinner
+            android:id="@+id/new_task_category_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:layoutDirection="ltr"
+            android:layout_below="@id/new_task_category_text_view"
+            android:fontFamily="@font/poppins_semibold"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/new_task_save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/transparent"
+        android:text="@string/save_NewTask"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/poppins_semibold" />
+
+    <Button
+        android:id="@+id/new_task_cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/transparent"
+        android:text="@string/cancel_NewTask"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/poppins_semibold" />
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:layout_centerInParent="true"
+        android:id="@+id/new_task_time_lin_layout"
+        android:visibility="invisible">
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/new_task_datePicker_cancel_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/ic_cancel_black"-->
+<!--            android:layout_gravity="right"-->
+<!--            android:padding="10dp"/>-->
+
+        <TimePicker
+            android:id="@+id/new_task_timePicker"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <Button
+            android:id="@+id/new_task_timepicker_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/close_NewTask"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:visibility="visible"
+            android:layout_below="@id/new_task_timePicker"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/new_task_timepicker_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:visibility="visible"
+            android:layout_below="@id/new_task_timePicker"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_centerInParent="true"
+        android:id="@+id/new_task_date_lin_layout"
+        android:visibility="invisible"
+        android:padding="10dp"
+        android:layout_margin="20dp">
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/new_task_timepicker_cancel_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/ic_cancel_black"-->
+<!--            android:layout_gravity="right"-->
+<!--            android:padding="10dp"/>-->
+
+        <DatePicker
+            android:id="@+id/new_task_datepicker"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <Button
+            android:id="@+id/new_task_datePicker_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/close_NewTask"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:visibility="visible"
+            android:layout_below="@id/new_task_datepicker"
+            android:layout_alignParentLeft="true"/>
+
+
+        <Button
+            android:id="@+id/new_task_datePicker_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_NewTask"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:visibility="visible"
+            android:layout_below="@id/new_task_datepicker"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

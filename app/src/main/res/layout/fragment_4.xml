@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/No_Email_View_Rel_Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/frag_4_null_view_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_nullview4final"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_scheduled_any_email_Fragment4"
+            android:textSize="19sp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_below="@id/frag_4_null_view_image"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"/>
+
+    </RelativeLayout>
+
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/email_list_swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/email_rec_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:paddingBottom="95dp"
+            android:clipToPadding="false"/>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+<!--    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton-->
+<!--        android:id="@+id/fab_email_list"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:background="@color/colorPrimaryDark"-->
+<!--        android:elevation="10dp"-->
+<!--        android:text="@string/new_email_Fragment4"-->
+<!--        app:icon="@drawable/ic_add_home_fragment"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"/>-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/Fragment_4_No_App_Password_Error_btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_error"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:tint="@color/colorPrimaryDark"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_alignParentRight="true" />-->
+
+</RelativeLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:background="@color/color_light_white">-->
+
+<!--&lt;!&ndash;    <com.google.android.material.appbar.AppBarLayout&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/app_bar_fragment_4"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="?attr/actionBarSize"/>&ndash;&gt;-->
+<!--    <com.google.android.material.appbar.CollapsingToolbarLayout-->
+<!--        android:id="@+id/Fragment_4_calendar_toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:contentScrim="@color/colorBackground"-->
+<!--        app:expandedTitleGravity="center"-->
+<!--        app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed|snap">-->
+
+
+<!--        <DatePicker-->
+<!--            android:id="@+id/Fragment_4_calendar_view"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"/>-->
+<!--    </com.google.android.material.appbar.CollapsingToolbarLayout>-->
+
+<!--    <Button-->
+<!--        app:layout_anchorGravity="bottom|center_horizontal"-->
+<!--        app:layout_anchor="@id/Fragment_4_swipe_layout"-->
+<!--        android:id="@+id/New_Event_Create_Btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Add New Event"-->
+<!--        android:backgroundTint="@color/colorPrimaryDark"-->
+<!--        android:layout_margin="32dp"/>-->
+
+
+<!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--        android:id="@+id/Fragment_4_swipe_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_anchor="@id/Fragment_4_calendar_toolbar"-->
+<!--        app:layout_anchorGravity="bottom"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" >-->
+
+
+
+
+<!--&lt;!&ndash;        <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/No_Event_View"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:visibility="gone">&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/No_Event_Text_View"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="There is no event of selected date"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textSize="18sp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_centerInParent="true"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <Button&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/New_Event_From_Rec"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_below="@id/No_Event_Text_View"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_margin="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="Create New Event"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textColor="@color/colorPrimary"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:backgroundTint="@color/colorPrimaryDark"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </RelativeLayout>&ndash;&gt;-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/Fragment_4_event_rec_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:paddingBottom="70dp"/>-->
+
+<!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+<!--</androidx.coordinatorlayout.widget.CoordinatorLayout>-->

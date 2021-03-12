@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/splashicon"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/login_page_image"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:id="@+id/splashtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name_SplashScreen"
+        android:textSize="32sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:elevation="20dp"
+        android:fontFamily="@font/aclonica"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/splashicon"/>
+
+    <TextView
+        android:id="@+id/SplashQuoteTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splashtxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/denk_one"
+        android:text="Quote"
+        android:textColor="@color/color_yellow"
+        android:textSize="22sp"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

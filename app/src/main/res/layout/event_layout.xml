@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3pt"
+        android:layout_marginBottom="3pt"
+        android:layout_marginLeft="3pt"
+        android:layout_marginRight="3pt"
+        >
+
+        <View
+            android:layout_alignParentTop="true"
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/color_yellow" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            >
+
+            <!--        <RelativeLayout-->
+            <!--            android:id="@+id/new_note_rel_layout_1"-->
+            <!--            android:layout_width="350dp"-->
+            <!--            android:layout_height="wrap_content">-->
+
+            <TextView
+                android:id="@+id/event_time_txt_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:padding="16dp"
+                android:text="Time" />
+
+            <TextView
+                android:id="@+id/event_title_txt_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Video call to client team"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/event_desc_txt_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:maxLines="3"
+                android:padding="16dp"
+                android:text="Random Text" />
+            <!--        </RelativeLayout>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/event_layout_menu_btn"
+                android:layout_marginTop="7pt"
+                android:layout_marginRight="2pt"
+                android:layout_width="10pt"
+                android:layout_height="10pt"
+                android:src="@drawable/ic_menu"
+                android:background="@color/colorPrimary"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/relativeLayout"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="top|end"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/new_note_rel_layout_1"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/view1">-->
+
+    <!--            <com.google.android.material.appbar.AppBarLayout-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content">-->
+
+    <!--            </com.google.android.material.appbar.AppBarLayout>-->
+
+
+    <!--            <androidx.appcompat.widget.Toolbar-->
+    <!--                android:id="@+id/new_note_toolbar"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="35dp"-->
+    <!--                app:menu="@menu/note_layout_menu"-->
+    <!--                tools:layout_editor_absoluteX="334dp"-->
+    <!--                tools:layout_editor_absoluteY="10dp" />-->
+    <!--        </RelativeLayout>-->
+
+
+
+</com.google.android.material.card.MaterialCardView>

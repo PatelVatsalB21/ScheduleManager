@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<!--  <RelativeLayout-->
+<!--      android:id="@+id/Fragment_3_lin_layout"-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="50dp">-->
+
+<!--&lt;!&ndash;    <ImageButton&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/new_note_add_btn"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginLeft="230dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:background="@color/colorPrimary"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:src="@drawable/ic_add_home_fragment" />&ndash;&gt;-->
+
+<!--    <ImageButton-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_marginRight="50dp"-->
+<!--        android:background="@color/colorPrimary"-->
+<!--        android:src="@drawable/ic_edit" />-->
+
+
+<!--  </RelativeLayout>-->
+    <RelativeLayout
+        android:id="@+id/No_Notes_View_Rel_Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/frag_3_null_view_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/null_view_notes"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_created_any_notes_Fragment3"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_below="@id/frag_3_null_view_image"
+            android:layout_margin="20dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+<!--      android:layout_below="@+id/Fragment_3_lin_layout"-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/Fragment_3_swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/notes_rec_view"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_centerInParent="true"
+          android:orientation="vertical"
+          android:paddingBottom="95dp"
+          android:clipToPadding="false" />
+
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+<!--        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/new_note_Fragment3"-->
+<!--            android:id="@+id/new_note_add_btn"-->
+<!--            app:icon="@drawable/ic_add"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginBottom="5dp"/>-->
+
+
+
+</RelativeLayout>

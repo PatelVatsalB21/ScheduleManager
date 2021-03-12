@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/widget_main_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Schedule Manager"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/widget_main_layout_title">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/widget_main_layout_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/example_widget_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="Empty"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+</RelativeLayout>

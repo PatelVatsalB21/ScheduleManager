@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home_icon_selector"
+            android:title="Home" />
+        <!--        <item-->
+        <!--            android:icon="@drawable/ic_user_account"-->
+        <!--            android:id="@+id/nav_home"-->
+        <!--            android:title="User" />-->
+
+        <item
+            android:id="@+id/nav_my_todo"
+            android:icon="@drawable/nav_task_icon_selector"
+            android:title="Tasks" />
+
+        <item
+            android:id="@+id/nav_my_notes"
+            android:icon="@drawable/nav_notes_icon_selector"
+            android:title="Notes" />
+
+        <item
+            android:id="@+id/nav_my_email"
+            android:icon="@drawable/nav_email_icon_selector"
+            android:title="Emails" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_unselected"
+            android:title="Settings" />
+
+        <item android:id="@+id/nav_trash"
+            android:icon="@drawable/ic_trash"
+            android:title="Trash"/>
+
+<!--        <item-->
+<!--            android:title="LogOut"-->
+<!--            android:icon="@drawable/ic_login"-->
+<!--            android:id="@+id/nav_logout_btn"/>-->
+    </group>
+
+    <item android:title="More">
+        <menu>
+            <item
+                android:id="@+id/nav_rate_us"
+                android:title="Rate Us" />
+            <item
+                android:id="@+id/nav_share_app"
+                android:title="Share App" />
+
+            <item
+                android:id="@+id/nav_about_us"
+                android:title="About Us" />
+
+        </menu>
+    </item>
+
+</menu>

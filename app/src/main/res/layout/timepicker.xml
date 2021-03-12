@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:paddingBottom="20dp">
+
+    <RelativeLayout
+        android:id="@+id/note_reminder_appBar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Reminder"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/note_reminder_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_below="@id/note_reminder_appBar_layout">
+    <TextView
+        android:id="@+id/note_reminder_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="5"
+        android:text="Title"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/note_reminder_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="10"
+        android:text="Desc"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/note_reminder_title"/>
+
+    <RelativeLayout
+        android:id="@+id/note_reminder_calendar_rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_reminder_note"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/note_reminder_date_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/note_reminder_calendar_show_btn"
+            android:text="@string/date_NewTask"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/note_reminder_calendar_show_btn" />
+
+        <Button
+            android:id="@+id/note_reminder_calendar_show_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/show_calendar_btn_NewTask"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/note_reminder_timePicker_rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_reminder_calendar_rel_layout"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/note_reminder_time_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/note_reminder_timePicker_show_btn"
+            android:layout_toLeftOf="@id/note_reminder_timePicker_show_btn"
+            android:text="@string/time_NewTask"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/note_reminder_timePicker_show_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/show_clock_btn_NewTask"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:layout_centerInParent="true"
+        android:id="@+id/note_reminder_time_lin_layout"
+        android:visibility="invisible">
+
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/new_task_datePicker_cancel_btn"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@drawable/ic_cancel_black"-->
+        <!--            android:layout_gravity="right"-->
+        <!--            android:padding="10dp"/>-->
+
+        <TimePicker
+            android:id="@+id/note_reminder_timePicker"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <Button
+            android:id="@+id/note_reminder_timepicker_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/close_NewTask"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:visibility="visible"
+            android:layout_below="@id/note_reminder_timePicker"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/note_reminder_timepicker_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:visibility="visible"
+            android:layout_below="@id/note_reminder_timePicker"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_centerInParent="true"
+        android:id="@+id/note_reminder_date_lin_layout"
+        android:visibility="invisible"
+        android:padding="10dp"
+        android:layout_margin="20dp">
+
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/new_task_timepicker_cancel_btn"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@drawable/ic_cancel_black"-->
+        <!--            android:layout_gravity="right"-->
+        <!--            android:padding="10dp"/>-->
+
+        <DatePicker
+            android:id="@+id/note_reminder_datepicker"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <Button
+            android:id="@+id/note_reminder_datePicker_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/close_NewTask"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:visibility="visible"
+            android:layout_below="@id/note_reminder_datepicker"
+            android:layout_alignParentLeft="true"/>
+
+
+        <Button
+            android:id="@+id/note_reminder_datePicker_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_NewTask"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:visibility="visible"
+            android:layout_below="@id/note_reminder_datepicker"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+      <Button
+          android:id="@+id/save_calender_detail_btn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/save_Timepicker"
+          android:textColor="@color/color_yellow"
+          android:fontFamily="@font/poppins_semibold"
+          android:background="@android:color/transparent"
+          android:layout_margin="10dp"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true" />
+
+      <Button
+          android:id="@+id/cancel_alarm_btn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/cancel_alarm_Timepicker"
+          android:textColor="@color/color_yellow"
+          android:fontFamily="@font/poppins_semibold"
+          android:background="@android:color/transparent"
+          android:layout_margin="10dp"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true"/>
+</RelativeLayout>

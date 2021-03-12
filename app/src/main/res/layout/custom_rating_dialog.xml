@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    app:behavior_peekHeight="200dp"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    android:background="@color/colorAccent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_margin="0.5dp"
+        android:background="@drawable/rating_bar_outline">
+    <TextView
+        android:id="@+id/custom_rating_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:visibility="visible"
+        android:text="Rate Us"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:id="@+id/custom_rating_dialog_guide_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="visible"
+        android:text="Please give your valuable feedback and help us improve"
+        android:gravity="center_horizontal"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_medium"
+        />
+
+    <LinearLayout
+        android:id="@+id/custom_rating_dialog_ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+     <ImageView
+         android:id="@+id/custom_dialog_star_1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/ic_star_full_48dp"
+         app:tint="@color/color_yellow" />
+
+        <ImageView
+            android:id="@+id/custom_dialog_star_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_full_48dp"
+            app:tint="@color/color_yellow"/>
+
+        <ImageView
+            android:id="@+id/custom_dialog_star_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_full_48dp"
+            app:tint="@color/color_yellow"/>
+
+        <ImageView
+            android:id="@+id/custom_dialog_star_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_full_48dp"
+            app:tint="@color/color_yellow"/>
+
+        <ImageView
+            android:id="@+id/custom_dialog_star_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_full_48dp"
+            app:tint="@color/color_yellow"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/custom_rating_dialog_star_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center_horizontal"
+        android:text="Superb!"
+        android:textSize="14sp"
+        android:fontFamily="@font/aclonica"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feedback"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/custom_rating_dialog_feedback_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:maxLength="300"
+            android:textSize="12sp"
+            android:theme="@style/Cursor"
+            android:textCursorDrawable="@drawable/cursor_drawable"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="@drawable/rating_bar_outline"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/custom_dialog_remind_later_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remind Later"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentLeft="true"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/custom_dialog_submit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_alignParentRight="true"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_margin="10dp"
+            android:padding="10dp"/>
+
+    </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

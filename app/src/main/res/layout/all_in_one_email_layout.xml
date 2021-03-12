@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/All_In_One_Email_Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="4dp"
+    android:background="@color/colorPrimary"
+    android:layout_margin="5dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+
+    <TextView
+        android:id="@+id/All_In_One_Email_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_margin="5dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:hint="Date"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/recyclerview_item_outline"
+        android:layout_toEndOf="@id/All_In_One_Email_Date"
+        android:layout_toRightOf="@id/All_In_One_Email_Date"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/Violet_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@id/All_In_One_Email_Icon_lin_layout"
+            android:layout_toLeftOf="@id/All_In_One_Email_Icon_lin_layout">
+
+            <!--        <RelativeLayout-->
+            <!--            android:id="@+id/new_note_rel_layout_1"-->
+            <!--            android:layout_width="350dp"-->
+            <!--            android:layout_height="wrap_content">-->
+
+
+            <TextView
+                android:id="@+id/All_In_One_Email_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/Violet_new_txt"
+                android:hint="Time"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/All_In_One_Email_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="Subject"
+                android:textColor="@color/Violet_new_txt"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:maxLength="50"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/All_In_One_Email_Time"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/All_In_One_Email_Desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:maxLines="3"
+                android:maxLength="50"
+                android:text="Message"
+                android:textColor="@color/Violet_new_txt"
+                android:autoLink="all"
+                android:layout_margin="10dp"
+                android:layout_below="@id/All_In_One_Email_Title"
+                android:layout_alignParentLeft="true"/>
+            <!--        </RelativeLayout>-->
+
+            <TextView
+                android:id="@+id/All_In_One_Email_Pending_Warning_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You need to turn on internet to send this pending mail"
+                android:textSize="16sp"
+                android:textColor="@color/red"
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/All_In_One_Email_Desc"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/All_In_One_Email_Icon_lin_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="50pt"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/All_In_One_Email_Icon"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:src="@drawable/ic_email"
+                app:tint="@color/Violet_new_txt"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/relativeLayout"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="top|end"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/new_note_rel_layout_1"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/view1">-->
+
+    <!--            <com.google.android.material.appbar.AppBarLayout-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content">-->
+
+    <!--            </com.google.android.material.appbar.AppBarLayout>-->
+
+
+    <!--            <androidx.appcompat.widget.Toolbar-->
+    <!--                android:id="@+id/new_note_toolbar"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="35dp"-->
+    <!--                app:menu="@menu/note_layout_menu"-->
+    <!--                tools:layout_editor_absoluteX="334dp"-->
+    <!--                tools:layout_editor_absoluteY="10dp" />-->
+    <!--        </RelativeLayout>-->
+
+    </RelativeLayout>
+</RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

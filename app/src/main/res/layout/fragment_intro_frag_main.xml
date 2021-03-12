@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/frag_main_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Schedule Manager"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/frag_main_sub_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Makes your day easy"
+        android:textColor="@color/color_yellow"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/frag_main_imgView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/intro_main_image" />
+
+    <TextView
+        android:id="@+id/frag_main_explain_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="Schedule Manager helps you remind all task and notes every thing you want. Also it schedules email. Hence making your day easy."
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
+
+</LinearLayout>

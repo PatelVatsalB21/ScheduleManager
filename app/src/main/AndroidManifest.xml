@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="Schedule Manager"
+    package="com.example.schedulemanager">
+
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission
+        android:name="android.permission.USE_CREDENTIALS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_notes"
+        android:label="Schedule Manager"
+        android:roundIcon="@mipmap/ic_notes"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".note.CanvasActivity"></activity>
+        <activity
+            android:name=".email.AppPasswordSetupActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Trash.TrashMainPage" />
+        <activity android:name=".Setting.BackupSettings" />
+        <activity android:name=".Setting.AppPasswordActivity" />
+        <activity android:name=".Intro.Introduction" />
+        <activity android:name=".email.Email_Open" /> <!-- <activity android:name=".Calendar.Event_Open" /> -->
+        <!-- <activity android:name=".Calendar.NewCalendarEvent" /> -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5383174024251490~2372192563" />
+
+        <activity android:name=".LoginandUser.SplashScreen">
+            <intent-filter android:label="Firebase">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- <activity android:name=".Pop_up_Dialog" /> -->
+        <activity
+            android:name=".Task.TaskOpen"
+            android:windowSoftInputMode="stateHidden" /> <!-- <activity android:name=".email.EmailList" /> -->
+        <activity
+            android:name=".email.ScheduleEmail"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LoginandUser.UserProfile"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LoginandUser.Register"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".note.Note_Open"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".note.NewNoteAddDialog"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".Task.NewTask"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".note.Timepicker" /> <!-- <activity android:name=".email.TimeEmailDialog" /> -->
+        <activity android:name=".MainActivity" /> <!-- <meta-data -->
+        <!-- android:name="com.facebook.sdk.ApplicationId" -->
+        <!-- android:value="@string/facebook_app_id" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.facebook.FacebookActivity" -->
+        <!-- android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" -->
+        <!-- android:label="FireBase" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.facebook.CustomTabActivity" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.VIEW" /> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
+        <!-- <data android:scheme="@string/fb_login_protocol_scheme" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity android:name=".MainFragments.HomePage" />
+
+        <receiver
+            android:name=".note.AlarmReciever"
+            android:enabled="true" />
+        <receiver
+            android:name=".email.EmailReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".FloatingWidget"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".email.EmailService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name=".email.NetworkReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".Task.TaskReceiver"
+            android:enabled="true"
+            android:exported="true" /> <!-- <receiver android:name=".Widget.WidgetProvider"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.appwidget.action.APPWIDGET_UPDATE" /> -->
+        <!-- </intent-filter> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.appwidget.provider" -->
+        <!-- android:resource="@xml/widget_info" /> -->
+        <!-- </receiver> -->
+        <receiver
+            android:name=".AlwaysOnNotification"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".PopUpDialogService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".Setting.Settings_Main"
+            android:windowSoftInputMode="stateHidden" />
+
+        <receiver
+            android:name=".BootReciever"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".Task.FullScreenTaskReminder"
+            android:showOnLockScreen="true"
+            android:screenOrientation="sensorPortrait"/>
+
+        <service android:name=".NotifierService"
+            android:enabled="true"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Setting.BackupSettings">
+
+    <ImageButton
+        android:id="@+id/Backup_Settings_layout_Back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:tint="@color/colorPrimaryDark"
+        android:background="@android:color/transparent"
+        android:padding="15dp"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Backup_Settings_layout_Back_btn"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Backup Settings"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:id="@+id/Setting_Update_Rel_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/Backup_Settings_layout_Back_btn">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/Setting_Update_Data_btn"
+            android:layout_toLeftOf="@id/Setting_Update_Data_btn"
+            android:gravity="center_vertical"
+            android:text="@string/update_user_data_Settings"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_medium" />
+
+        <ImageButton
+            android:id="@+id/Setting_Update_Data_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:tint="@color/colorAccent"
+            android:src="@drawable/ic_upload" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Setting_Restore_Rel_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/Setting_Update_Rel_Layout"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/Setting_Restore_Data_btn"
+            android:layout_toLeftOf="@id/Setting_Restore_Data_btn"
+            android:text="@string/restore_user_data_Settings"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_medium" />
+
+        <ImageButton
+            android:id="@+id/Setting_Restore_Data_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:tint="@color/colorAccent"
+            android:src="@drawable/ic_restore" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Trash.TrashMainPage">
+
+    <com.example.schedulemanager.MainFragments.HomePageViewPager
+        android:id="@+id/trash_Main_View_Pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/trash_Main_View_Pager_tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@color/colorInversePrimary"
+            app:tabSelectedTextColor="@color/colorAccent"/>
+
+    </com.example.schedulemanager.MainFragments.HomePageViewPager>
+
+</RelativeLayout>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Choose a theme of your mood"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="24sp" />
+
+    <RelativeLayout
+        android:id="@+id/intro_frag_3_theme_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/recyclerview_item_outline"
+        android:elevation="20dp"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/intro_frag_3_theme_layout_1_img_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_user_account"
+            android:tint="#1D2A75" />
+
+        <TextView
+            android:id="@+id/intro_frag_3_theme_layout_1_txt_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Day Theme (Default)"
+            android:textColor="#1D2A75"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/intro_frag_3_theme_layout_1_radio_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:buttonTint="#1D2A75"
+            android:layoutDirection="rtl"
+            android:paddingLeft="30dp"
+            android:paddingBottom="20dp" />
+
+        <TextView
+            android:id="@+id/intro_frag_3_theme_layout_1_txt_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/intro_frag_3_theme_layout_1_img_1"
+            android:text="-----------------------------------------"
+            android:textColor="#1D2A75"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/intro_frag_3_theme_layout_1_txt_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/intro_frag_3_theme_layout_1_txt_1"
+            android:text="------------------------------------------------------------"
+            android:textColor="#1D2A75"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/intro_frag_3_theme_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro_frag_3_theme_layout_1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/black"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/intro_frag_3_theme_layout_2_img_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_user_account"
+            android:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/intro_frag_3_theme_layout_2_txt_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Night Theme"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/intro_frag_3_theme_layout_2_radio_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:buttonTint="@android:color/white"
+            android:layoutDirection="rtl"
+            android:paddingLeft="30dp"
+            android:paddingBottom="20dp" />
+
+        <TextView
+            android:id="@+id/intro_frag_3_theme_layout_2_txt_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/intro_frag_3_theme_layout_2_img_1"
+            android:text="-----------------------------------------"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/intro_frag_3_theme_layout_2_txt_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/intro_frag_3_theme_layout_2_txt_1"
+            android:text="------------------------------------------------------------"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/intro_frag_3_theme_layout_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro_frag_3_theme_layout_2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:elevation="20dp"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_auto_night_theme_background">
+
+        <ImageView
+            android:id="@+id/intro_frag_3_theme_layout_3_img_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:tint="#FFF"
+            android:src="@drawable/ic_user_account" />
+
+        <TextView
+            android:id="@+id/intro_frag_3_theme_layout_3_txt_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Auto (Follows System)"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/intro_frag_3_theme_layout_3_radio_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layoutDirection="rtl"
+            android:paddingLeft="30dp"
+            android:paddingBottom="20dp" />
+
+        <TextView
+            android:id="@+id/intro_frag_3_theme_layout_3_txt_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/intro_frag_3_theme_layout_3_img_1"
+            android:text="-----------------------------------------"
+            android:textSize="20dp"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/intro_frag_3_theme_layout_3_txt_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/intro_frag_3_theme_layout_3_txt_1"
+            android:text="------------------------------------------------------------"
+            android:textSize="20dp"
+            android:textColor="@color/colorAccent"/>
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/intro_frag_3_theme_layout_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro_frag_3_theme_layout_3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:elevation="20dp"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_auto_battery_theme_background">
+        <ImageView
+            android:id="@+id/intro_frag_3_theme_layout_4_img_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_user_account" />
+
+        <TextView
+            android:id="@+id/intro_frag_3_theme_layout_4_txt_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Auto as per Battery"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"/>
+
+        <RadioButton
+            android:id="@+id/intro_frag_3_theme_layout_4_radio_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layoutDirection="rtl"
+            android:buttonTint="#FFF"
+            android:paddingLeft="30dp"
+            android:paddingBottom="20dp" />
+
+        <TextView
+            android:id="@+id/intro_frag_3_theme_layout_4_txt_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/intro_frag_3_theme_layout_4_img_1"
+            android:text="-----------------------------------------"
+            android:textSize="20dp"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/intro_frag_3_theme_layout_4_txt_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/intro_frag_3_theme_layout_4_txt_1"
+            android:text="------------------------------------------------------------"
+            android:textSize="20dp"
+            android:textColor="@color/colorAccent"/>
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

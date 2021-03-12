@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent">
+    <RelativeLayout
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/task_notification_collapsed_type_of_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Type of task"
+            android:textSize="14sp"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/task_notification_collapsed_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/task_notification_collapsed_type_of_task"
+            android:text="Title"
+            android:textSize="22sp"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginLeft="10dp"/>
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/task_notification_collapsed_lottie_imageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_centerVertical="true"/>
+
+    <!--    <com.airbnb.lottie.LottieAnimationView-->
+    <!--        android:id="@+id/task_collapsed_lottie_view"-->
+    <!--        android:layout_width="50dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginLeft="10dp"-->
+    <!--        android:layout_marginRight="10dp"-->
+    <!--        app:lottie_autoPlay="true"-->
+    <!--        app:lottie_loop="true"-->
+    <!--        app:lottie_rawRes="@raw/meal_time"-->
+    <!--        android:layout_marginTop="10dp"/>-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/task_notification_collapsed_title"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Task Title"-->
+    <!--        android:textColor="@color/color4"-->
+    <!--        android:textSize="22sp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_toEndOf="@+id/task_collapsed_lottie_view"-->
+    <!--        android:layout_toRightOf="@+id/task_collapsed_lottie_view" />-->
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/task_notification_collapsed_time"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Time"-->
+    <!--        android:textColor="@color/color4"-->
+    <!--        android:textSize="18sp"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_toEndOf="@id/task_collapsed_lottie_view"-->
+    <!--        android:layout_toRightOf="@id/task_collapsed_lottie_view" />-->
+
+    <!--        android:layout_toEndOf="@+id/task_notification_collapsed_title"-->
+    <!--        android:layout_toRightOf="@+id/task_notification_collapsed_title" -->
+
+    </RelativeLayout>
+</RelativeLayout>

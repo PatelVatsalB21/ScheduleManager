@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/note_bg_color_dialog_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_background_NoteBackgroundColor_Dialog"
+        android:textSize="22sp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/note_bg_color_dialog_rel_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_bg_color_dialog_heading"
+        android:layout_alignStart="@+id/note_bg_color_dialog_rel_3"
+        android:layout_alignLeft="@+id/note_bg_color_dialog_rel_3"
+        android:layout_alignEnd="@+id/note_bg_color_dialog_rel_3"
+        android:layout_alignRight="@+id/note_bg_color_dialog_rel_3"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/Note_Background_Radio_Default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Default" />
+
+        <ImageView
+            android:id="@+id/Note_Background_Img_View_Default"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/quick_note_white_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/note_bg_color_dialog_rel_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_bg_color_dialog_rel_1"
+        android:layout_alignStart="@+id/note_bg_color_dialog_rel_4"
+        android:layout_alignLeft="@+id/note_bg_color_dialog_rel_4"
+        android:layout_alignEnd="@+id/note_bg_color_dialog_rel_4"
+        android:layout_alignRight="@+id/note_bg_color_dialog_rel_4"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/Note_Background_Radio_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Dark Blue"
+            android:buttonTint="@color/note_bg_color_1"/>
+
+        <ImageView
+            android:id="@+id/Note_Background_Img_View_1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/note_bg_color_1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/note_bg_color_dialog_rel_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_bg_color_dialog_rel_2"
+        android:layout_alignStart="@+id/note_bg_color_dialog_rel_5"
+        android:layout_alignLeft="@+id/note_bg_color_dialog_rel_5"
+        android:layout_alignEnd="@+id/note_bg_color_dialog_rel_5"
+        android:layout_alignRight="@+id/note_bg_color_dialog_rel_5"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/Note_Background_Radio_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Yellow"
+            android:buttonTint="@color/note_bg_color_2"/>
+
+        <ImageView
+            android:id="@+id/Note_Background_Img_View_2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/note_bg_color_2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/note_bg_color_dialog_rel_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_bg_color_dialog_rel_3"
+        android:layout_alignStart="@+id/note_bg_color_dialog_rel_6"
+        android:layout_alignLeft="@+id/note_bg_color_dialog_rel_6"
+        android:layout_alignEnd="@+id/note_bg_color_dialog_rel_6"
+        android:layout_alignRight="@+id/note_bg_color_dialog_rel_6"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/Note_Background_Radio_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Orange"
+            android:buttonTint="@color/note_bg_color_3"/>
+
+        <ImageView
+            android:id="@+id/Note_Background_Img_View_3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/note_bg_color_3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/note_bg_color_dialog_rel_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/note_bg_color_dialog_rel_4">
+
+        <RadioButton
+            android:id="@+id/Note_Background_Radio_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Light Green"
+            android:buttonTint="@color/note_bg_color_4"/>
+
+        <ImageView
+            android:id="@+id/Note_Background_Img_View_4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/note_bg_color_4"
+            android:layout_toEndOf="@id/Note_Background_Radio_4"
+            android:layout_toRightOf="@id/Note_Background_Radio_4" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/note_bg_color_dialog_rel_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_bg_color_dialog_rel_5"
+        android:layout_alignStart="@+id/note_bg_color_dialog_rel_5"
+        android:layout_alignLeft="@+id/note_bg_color_dialog_rel_5"
+        android:layout_alignEnd="@+id/note_bg_color_dialog_rel_5"
+        android:layout_alignRight="@+id/note_bg_color_dialog_rel_5"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/Note_Background_Radio_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center_vertical"
+            android:text="Pink"
+            android:buttonTint="@color/note_bg_color_5"/>
+
+        <ImageView
+            android:id="@+id/Note_Background_Img_View_5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/note_bg_color_5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/note_bg_color_dialog_rel_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_bg_color_dialog_rel_6"
+        android:layout_alignStart="@+id/note_bg_color_dialog_rel_6"
+        android:layout_alignLeft="@+id/note_bg_color_dialog_rel_6"
+        android:layout_alignEnd="@+id/note_bg_color_dialog_rel_6"
+        android:layout_alignRight="@+id/note_bg_color_dialog_rel_6"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/Note_Background_Radio_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center_vertical"
+            android:text="Light Blue"
+            android:buttonTint="@color/note_bg_color_6"/>
+
+        <ImageView
+            android:id="@+id/Note_Background_Img_View_6"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/note_bg_color_6" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/note_bg_color_dialog_rel_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_bg_color_dialog_rel_7"
+        android:layout_alignStart="@+id/note_bg_color_dialog_rel_7"
+        android:layout_alignLeft="@+id/note_bg_color_dialog_rel_7"
+        android:layout_alignEnd="@+id/note_bg_color_dialog_rel_7"
+        android:layout_alignRight="@+id/note_bg_color_dialog_rel_7"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/Note_Background_Radio_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center_vertical"
+            android:text="Dark Cyan"
+            android:buttonTint="@color/note_bg_color_7" />
+
+        <ImageView
+            android:id="@+id/Note_Background_Img_View_7"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/note_bg_color_7" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

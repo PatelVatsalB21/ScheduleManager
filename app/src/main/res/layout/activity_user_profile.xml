@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--    tools:context=".EditProfile">-->
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/profileImageView"
+        android:layout_marginBottom="63dp"
+        android:background="@drawable/profile_page_decoration_rect" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profile_back_button"
+        android:layout_alignBottom="@+id/profile_back_button"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Profile Settings"
+        android:textColor="@color/White"
+        android:textSize="25sp" />
+
+    <ImageButton
+        android:id="@+id/profile_back_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_back"
+        android:tint="@color/White"
+        android:background="@android:color/transparent"
+        android:padding="5dp"
+        android:layout_margin="10dp"/>
+
+
+    <ImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        android:background="@drawable/profile_img_decoration"
+        android:elevation="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/profile_FullName_rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/profileImageView"
+        android:layout_marginTop="20dp">
+
+    <TextView
+        android:id="@+id/profile_FullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="User Name"
+        android:textSize="22sp"
+        android:maxLength="30"
+        android:fontFamily="@font/poppins_semibold" />
+
+    <ImageButton
+        android:id="@+id/profile_ChangeName_imgBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_edit"
+        android:tint="@color/colorPrimaryDark"
+        android:padding="10dp"
+        android:layout_toEndOf="@id/profile_FullName"
+        android:layout_toRightOf="@id/profile_FullName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/profile_EmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_FullName_rel_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Email id"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_medium" />
+
+    <View
+        android:id="@+id/profile_decoration_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/profile_EmailAddress"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/decoration_line_for_items" />
+
+    <TextView
+        android:id="@+id/profile_Account_Settings_txt_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_decoration_1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/user_account_settings_Settings"
+        android:textSize="22sp"
+        android:fontFamily="@font/poppins_medium" />
+
+    <LinearLayout
+        android:id="@+id/profile_Account_Settings_Main_Rel_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/profile_Account_Settings_txt_view"
+        android:layout_margin="15dp"
+        android:gravity="center_vertical">
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/profile_UserName_Heading"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:text="@string/update_user_name_settings"-->
+<!--            android:textSize="18sp"-->
+<!--            android:fontFamily="@font/poppins_medium"-->
+<!--            android:layout_gravity="left"/>-->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/profile_Default_Email_ID_Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/update_email_id_Settings"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"/>
+
+            <ImageButton
+                android:id="@+id/profile_ChangeEmail_imgBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_edit"
+                android:tint="@color/colorPrimaryDark"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/profile_Default_Password_Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/update_password_Settings"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_gravity="left"
+            android:layout_alignParentLeft="true"/>
+
+
+            <ImageButton
+                android:id="@+id/profile_ChangePassword_imgBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_edit"
+                android:tint="@color/colorPrimaryDark"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!--  <EditText-->
+    <!--      android:id="@+id/profilePhoneNo"-->
+    <!--      android:layout_width="0dp"-->
+    <!--      android:layout_height="wrap_content"-->
+    <!--      android:layout_marginStart="24dp"-->
+    <!--      android:layout_marginTop="16dp"-->
+    <!--      android:layout_marginEnd="24dp"-->
+    <!--      android:ems="10"-->
+    <!--      android:inputType="phone"-->
+    <!--      android:hint="Phone"-->
+    <!--      app:layout_constraintEnd_toEndOf="parent"-->
+    <!--      app:layout_constraintStart_toStartOf="parent"-->
+    <!--      app:layout_constraintTop_toBottomOf="@+id/profileEmailAddress" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/profile_save_btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:text="Save"-->
+<!--        android:textColor="@color/colorPrimaryDark" />-->
+
+    <Button
+        android:id="@+id/profile_logoutbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:text="Logout"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/poppins_semibold"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/profile_delete_account_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="20dp"
+        android:text="Delete Account"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/transparent" />
+
+
+</RelativeLayout>

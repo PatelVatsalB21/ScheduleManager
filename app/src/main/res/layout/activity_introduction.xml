@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Intro.Introduction">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/introduction_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp">
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/introduction_view_pager_tab_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/tab1_imgView"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/tab_selector"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <ImageView
+            android:id="@+id/tab2_imgView"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/tab_selector"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+            android:id="@+id/tab3_imgView"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/tab_selector"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+            android:id="@+id/tab4_imgView"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/tab_selector"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/introduction_view_pager_skip_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/poppins_semibold"
+        android:background="@drawable/search_bar_border"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/introduction_view_pager_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/poppins_semibold"
+        android:background="@drawable/search_bar_border"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Main_Drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/colorPrimary"
+        app:menu="@menu/nav_drawer_menu"
+        app:itemIconTint="@color/colorPrimaryDark"
+        app:itemTextColor="@drawable/nav_drawer_text_color_selector"
+        android:fontFamily="@font/poppins_semibold"/>
+
+
+    <RelativeLayout
+        android:id="@+id/HomeScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--    <RelativeLayout-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:id="@+id/RelLayoutTop"-->
+        <!--        android:layout_alignParentTop="true">-->
+
+        <!--      <com.google.android.material.appbar.AppBarLayout-->
+        <!--          android:id="@+id/appBarLayoutBottom"-->
+        <!--          android:layout_width="match_parent"-->
+        <!--          android:layout_height="wrap_content">-->
+
+        <!--        <androidx.appcompat.widget.Toolbar-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="start">-->
+
+
+        <!--          <LinearLayout-->
+        <!--              android:layout_width="match_parent"-->
+        <!--              android:layout_height="match_parent"-->
+        <!--              android:layout_weight="100">-->
+
+
+        <!--&lt;!&ndash;            <ImageButton&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:id="@+id/NavigationDrawerBtn"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_marginRight="20dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_weight="10"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:src="@drawable/ic_nav_menu" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;            <SearchView&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:id="@+id/SearchView"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_weight="50"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:background="@drawable/search_bar_border"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_marginRight="30dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_marginTop="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_marginBottom="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:queryHint="Search Here"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:iconifiedByDefault= "false"/>&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;            <ImageButton&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:id="@+id/UserAccountBtn"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_weight="10"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:src="@drawable/ic_user_account"/>&ndash;&gt;-->
+
+
+        <!--          </LinearLayout>-->
+
+        <!--        </androidx.appcompat.widget.Toolbar>-->
+
+        <!--      </com.google.android.material.appbar.AppBarLayout>-->
+        <!--    </RelativeLayout>-->
+        <RelativeLayout
+            android:id="@+id/RelLayoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border_toolbar_top">
+
+                    <ImageButton
+                        android:id="@+id/NavigationDrawerBtn"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_nav_menu"
+                        android:tint="@color/colorPrimaryDark"
+                        android:backgroundTint="@android:color/transparent"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/HomePageAppTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/Home_Page_Profile_btn"
+                        android:layout_toStartOf="@id/Home_Page_Profile_btn"
+                        android:layout_toEndOf="@id/NavigationDrawerBtn"
+                        android:layout_toRightOf="@id/NavigationDrawerBtn"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/app_name_SplashScreen"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:fontFamily="@font/aclonica" />
+
+                    <ImageButton
+                        android:id="@+id/Home_Page_Profile_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_user_account"
+                        android:tint="@color/colorPrimaryDark"
+                        android:backgroundTint="@android:color/transparent"/>
+
+                </RelativeLayout>
+        </RelativeLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/HomePage_Coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RelLayoutTop">
+
+            <!--        <RelativeLayout-->
+            <!--            android:id="@+id/RelLayoutMid"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="top"-->
+            <!--            app:layout_anchor="@id/activity_Home_Bottom_AppBar"-->
+            <!--            app:layout_anchorGravity="top">-->
+
+            <View
+                android:id="@+id/revealView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:visibility="invisible" />
+
+
+            <!--        </RelativeLayout>-->
+
+
+            <!--    <Button-->
+            <!--        android:textColor="@android:color/white"-->
+            <!--        android:backgroundTint="#00C1E7"-->
+            <!--        android:id="@+id/createBtn"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_centerInParent="true"-->
+            <!--        android:text="Setup Floating Widget" />-->
+            <!--        <RelativeLayout-->
+            <!--            android:id="@+id/RelLayoutBottom"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_alignParentBottom="true">-->
+
+            <!--            <com.google.android.material.bottomnavigation.BottomNavigationView-->
+            <!--                android:id="@+id/BottomNavView"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="56dp"-->
+            <!--                android:layout_centerInParent="true"-->
+            <!--                android:layout_marginLeft="10dp"-->
+            <!--                android:layout_marginRight="10dp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:background="@drawable/border_toolbar_bottom"-->
+            <!--                android:elevation="10dp"-->
+            <!--                app:itemIconTint="@drawable/bottom_nav_items_background"-->
+            <!--                app:itemTextColor="@drawable/bottom_nav_items_background"-->
+            <!--                app:menu="@menu/bottom_navigation_items" >-->
+
+            <!--                -->
+            <!--            </com.google.android.material.bottomnavigation.BottomNavigationView>-->
+
+            <!--        </RelativeLayout>-->
+
+            <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--            android:id="@+id/collapsed_fab_container"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:elevation="8dp"-->
+            <!--            android:layout_above="@id/RelLayoutBottom"-->
+            <!--            android:layout_alignParentRight="true">-->
+
+            <!--            <com.google.android.material.button.MaterialButton-->
+            <!--                android:id="@+id/fab_Main_Home_Page"-->
+            <!--                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"-->
+            <!--                android:layout_width="56dp"-->
+            <!--                android:layout_height="56dp"-->
+            <!--                app:cornerRadius="56dp"-->
+            <!--                android:textColor="@color/colorPrimaryDark"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
+            <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--            android:id="@+id/expanded_fab_container"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:elevation="8dp"-->
+            <!--            android:layout_above="@id/RelLayoutBottom"-->
+            <!--            android:layout_alignParentRight="true">-->
+
+            <!--            <com.google.android.material.button.MaterialButton-->
+            <!--                android:id="@+id/fab_Main_Home"-->
+            <!--                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:cornerRadius="56dp"-->
+            <!--                android:textColor="@color/colorPrimaryDark"-->
+            <!--                app:icon="@drawable/ic_add"-->
+            <!--                app:iconTint="@color/colorPrimaryDark"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
+            <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <com.example.schedulemanager.MainFragments.HomePageViewPager
+                android:id="@+id/Container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                app:layout_anchor="@id/activity_Home_Bottom_AppBar"
+                app:layout_anchorGravity="top"
+                />
+            <!--                android:layout_marginBottom="56dp"-->
+
+            <RelativeLayout
+                android:id="@+id/fabs_container_home_page"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="top|center_horizontal"
+                android:paddingRight="15dp"
+                app:layout_anchor="@id/fab_main_app_bar"
+                app:layout_anchorGravity="top">
+
+                <!--                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+                <!--                    android:id="@+id/fab_home_frag"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_alignParentRight="true"-->
+                <!--                    android:layout_alignParentBottom="true"-->
+                <!--                    android:layout_marginRight="15dp"-->
+                <!--                    android:layout_marginBottom="15dp"-->
+                <!--                    android:elevation="10dp"-->
+                <!--                    android:src="@drawable/ic_add"-->
+                <!--                    android:visibility="visible"-->
+                <!--                    app:rippleColor="@color/color1"-->
+                <!--                    android:layout_marginEnd="15dp"-->
+                <!--                    android:layout_alignParentEnd="true" />-->
+                <!--        android:background="@color/colorPrimaryDark"-->
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_email"
+                    android:backgroundTint="@color/colorFabs"
+                    app:tint="@color/colorPrimaryDark"
+                    app:fabSize="mini" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/fab1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_edit"
+                    android:backgroundTint="@color/colorFabs"
+                    app:tint="@color/colorPrimaryDark"
+                    app:fabSize="mini" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/fab2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="10dp"
+                    android:src="@mipmap/ic_task"
+                    android:backgroundTint="@color/colorFabs"
+                    app:tint="@color/colorPrimaryDark"
+                    app:fabSize="mini" />
+                <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+                <!--        android:id="@+id/fab4"-->
+                <!--        android:layout_width="wrap_content"-->
+                <!--        android:layout_height="wrap_content"-->
+                <!--        app:fabSize="mini"-->
+                <!--        android:layout_alignParentRight="true"-->
+                <!--        android:layout_above="@id/fab3"-->
+                <!--        android:layout_marginRight="15dp"-->
+                <!--        android:layout_marginBottom="10dp"-->
+                <!--        android:elevation="10dp"-->
+                <!--        android:src="@drawable/ic_add"/>-->
+
+                <TextView
+                    android:id="@+id/fab1_txt_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_toStartOf="@id/fab1"
+                    android:layout_toLeftOf="@id/fab1"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="@string/add_email_FragmentHome"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/poppins_semibold" />
+
+                <TextView
+                    android:id="@+id/fab2_txt_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/fab1"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_toStartOf="@id/fab2"
+                    android:layout_toLeftOf="@id/fab2"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="@string/add_note_FragmentHome"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/poppins_semibold" />
+
+                <TextView
+                    android:id="@+id/fab3_txt_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/fab2"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_toStartOf="@id/fab3"
+                    android:layout_toLeftOf="@id/fab2"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="@string/add_task_FragmentHome"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/poppins_semibold" />
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_main_app_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_white"
+                app:tint="@color/colorFabs"
+                android:backgroundTint="@color/colorPrimaryDark"
+                app:layout_anchor="@id/activity_Home_Bottom_AppBar"
+                app:layout_anchorGravity="top"/>
+
+            <nl.dionsegijn.konfetti.KonfettiView
+                android:id="@+id/home_Konfetti"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:background="@android:color/transparent" />
+
+            <nl.dionsegijn.konfetti.KonfettiView
+                android:id="@+id/home_Konfetti_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:background="@android:color/transparent" />
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/activity_Home_Bottom_AppBar"
+                style="@style/Widget.MaterialComponents.BottomAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bottom_app_bar"
+                app:contentInsetRight="20dp"
+                app:fabAlignmentMode="center"
+                app:fabAnimationMode="scale"
+                app:fabCradleMargin="10dp"
+                app:fabCradleRoundedCornerRadius="30dp"
+                app:fabCradleVerticalOffset="10dp">
+
+                <!--            <LinearLayout-->
+                <!--                android:layout_width="200dp"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:gravity="start"-->
+                <!--                android:orientation="horizontal"-->
+                <!--                android:weightSum="5">-->
+                <!--                -->
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/nav_home_new"-->
+                <!--                    android:layout_height="40dp"-->
+                <!--                    android:src="@drawable/ic_home_selected"-->
+                <!--                    android:layout_weight="2"-->
+                <!--                    android:layout_width="0dp" />-->
+
+                <!--                -->
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/nav_Task_new"-->
+                <!--                    android:layout_height="40dp"-->
+                <!--                    android:src="@mipmap/ic_task"-->
+                <!--                    android:layout_weight="2"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_marginLeft="30dp"-->
+                <!--                    android:layout_marginStart="0dp" />-->
+
+                <!--            </LinearLayout>-->
+
+                <!--            <LinearLayout-->
+                <!--                android:layout_width="200dp"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:gravity="end"-->
+                <!--                android:orientation="horizontal"-->
+                <!--                android:weightSum="5">-->
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/nav_notes_new"-->
+                <!--                    android:layout_height="40dp"-->
+                <!--                    android:src="@drawable/ic_home_selected"-->
+                <!--                    android:layout_weight="2"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_marginRight="30dp"-->
+                <!--                    android:layout_marginEnd="30dp" />-->
+
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/nav_email_new"-->
+                <!--                    android:layout_height="40dp"-->
+                <!--                    android:src="@mipmap/ic_task"-->
+                <!--                    android:layout_weight="2"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    />-->
+
+                <!--            </LinearLayout>-->
+
+                <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="?actionBarSize">-->
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/nav_home_app_bar"-->
+                <!--                    android:layout_width="30dp"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:src="@drawable/ic_home_app_bar"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/nav_notes_app_bar"-->
+                <!--                    android:layout_width="30dp"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:layout_marginLeft="50dp"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:src="@drawable/ic_todo_app_bar"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent"-->
+                <!--                    app:layout_constraintStart_toEndOf="@id/nav_home_app_bar" />-->
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/nav_todo_app_bar"-->
+                <!--                    android:layout_width="30dp"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:layout_marginRight="50dp"-->
+                <!--                    android:src="@drawable/ic_note_app_bar"-->
+                <!--                    app:layout_constraintEnd_toStartOf="@id/nav_email_app_bar"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/nav_email_app_bar"-->
+                <!--                    android:layout_width="30dp"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:layout_marginRight="20dp"-->
+                <!--                    android:src="@drawable/ic_email_app_bar"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+
+                <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:id="@+id/nav_home_app_bar_lin_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/nav_home_app_bar"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/selector_home_app_bar" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Home"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="10sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nav_todo_app_bar_lin_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/nav_todo_app_bar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/selector_todo_app_bar" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tasks"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="10sp"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+                    <View
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="2"
+                        android:background="@android:color/transparent"/>
+
+
+                <LinearLayout
+                    android:id="@+id/nav_notes_app_bar_lin_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/nav_notes_app_bar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/selector_notes_app_bar" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notes"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/nav_email_app_bar_lin_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                <ImageView
+                        android:id="@+id/nav_email_app_bar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/selector_email_app_bar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+
+                </LinearLayout>
+
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

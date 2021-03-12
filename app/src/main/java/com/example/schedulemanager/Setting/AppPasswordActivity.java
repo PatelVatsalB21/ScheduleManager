@@ -1,0 +1,110 @@
+package com.example.schedulemanager.Setting;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.example.schedulemanager.MainFragments.HomePage;
+import com.example.schedulemanager.R;
+import com.example.schedulemanager.email.AppPasswordSetupActivity;
+
+public class AppPasswordActivity extends AppCompatActivity {
+
+
+    Button save_App_Password_btn, get_app_password_btn;
+    EditText app_password_Edit_txt;
+    ImageButton back;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_app_password);
+
+        save_App_Password_btn = findViewById(R.id.Setting_App_Password_layout_Save_btn);
+        app_password_Edit_txt = findViewById(R.id.Setting_App_Password_Password_Edit_txt);
+        get_app_password_btn = findViewById(R.id.Setting_App_Password_get_App_Password_btn);
+        back = findViewById(R.id.App_Password_layout_Back_btn);
+
+
+        if (Settings_Main.App_Password == null || Settings_Main.App_Password.isEmpty()) {
+            app_password_Edit_txt.setHint("Click here to add App Password");
+            save_App_Password_btn.setText("Save");
+        } else {
+            app_password_Edit_txt.setText(Settings_Main.App_Password);
+            save_App_Password_btn.setText("Update");
+        }
+
+        get_app_password_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AppPasswordActivity.this, AppPasswordSetupActivity.class));
+                finish();
+            }
+        });
+
+
+        save_App_Password_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!app_password_Edit_txt.getText().toString().isEmpty() && app_password_Edit_txt.getText().toString().trim().length() == 16) {
+//                    if (!app_password_Edit_txt.getText().toString().contains()){
+                    Settings_Main.App_Password = app_password_Edit_txt.getText().toString();
+                    Settings_Main.SaveSettings(AppPasswordActivity.this);
+                    Settings_Main.LoadChangedSettings(AppPasswordActivity.this);
+                    app_password_Edit_txt.setText(Settings_Main.App_Password);
+                    startActivity(new Intent(AppPasswordActivity.this, HomePage.class));
+                    onBackPressed();
+                    Toast.makeText(AppPasswordActivity.this, "App Password Saved Successfully", Toast.LENGTH_LONG).show();
+//                    }
+                } else
+                    Toast.makeText(AppPasswordActivity.this, "Please Enter 16 digit Valid Password", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+    }
+
+    public void AppPasswordGuide() {
+        final AlertDialog.Builder alert = new AlertDialog.Builder(AppPasswordActivity.this);
+        View mView = getLayoutInflater().inflate(R.layout.app_password_guide_layout, null);
+        Button open_settings = mView.findViewById(R.id.App_Password_Guide_Layout_setting_btn);
+        Button btn_cancel = mView.findViewById(R.id.App_Password_Guide_Layout_dismiss_btn);
+        alert.setView(mView);
+        final AlertDialog alertDialog = alert.create();
+        alertDialog.setCanceledOnTouchOutside(true);
+        open_settings.setVisibility(View.GONE);
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+        alertDialog.show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+}

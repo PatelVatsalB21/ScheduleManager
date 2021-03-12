@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <RelativeLayout
+        android:id="@+id/full_screen_task_reveal_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:visibility="visible">
+
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/full_screen_task_Konfetti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent" />
+
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/full_screen_task_Konfetti_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/full_screen_task_snooze_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/colorFabs"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/full_screen_task_normal_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorFabs">
+
+        <TextView
+            android:id="@+id/full_screen_task_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textSize="32sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentTop="true"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/full_screen_task_lottie_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:tint="@color/colorFabs"
+            android:background="@android:color/transparent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/full_screen_task_time"/>
+
+        <TextView
+            android:id="@+id/full_screen_task_head_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Head"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/full_screen_task_lottie_view"/>
+
+        <TextView
+            android:id="@+id/full_screen_task_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="30sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/full_screen_task_head_txt"/>
+
+    <RelativeLayout
+        android:id="@+id/full_screen_task_fab_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/full_screen_task_title_txt">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/full_screen_task_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginLeft="40dp"
+        android:maxWidth="72dp"
+        android:maxHeight="72dp"
+        android:src="@drawable/ic_snooze"
+        app:tint="@color/colorFabs"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp" />
+
+        <com.example.schedulemanager.Task.CircularRippleEffect
+            android:id="@+id/full_screen_task_ripple_container"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:rippleSize="200dp"
+            android:layout_centerInParent="true"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/full_screen_task_btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:src="@drawable/ic_alarm_selected"
+            app:tint="@color/colorFabs"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_centerInParent="true" />
+<!--    <SeekBar-->
+<!--        android:id="@+id/full_screen_task_seekBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="false"-->
+<!--        android:max="100"-->
+<!--        android:padding="20dp"-->
+<!--        android:progressDrawable="@android:color/transparent"-->
+<!--        android:thumb="@drawable/full_screen_seekbar_thumb"-->
+<!--        android:thumbTint="@color/colorPrimaryDark"-->
+<!--        android:layout_toEndOf="@id/full_screen_task_btn1"-->
+<!--        android:layout_toStartOf="@id/full_screen_task_btn2"-->
+<!--        android:layout_below="@id/full_screen_task_lottie_view"-->
+<!--        android:layout_toLeftOf="@id/full_screen_task_btn2"-->
+<!--        android:layout_toRightOf="@id/full_screen_task_btn1" />-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/full_screen_task_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginRight="40dp"
+        android:maxWidth="72dp"
+        android:maxHeight="72dp"
+        android:src="@drawable/ic_done"
+        app:tint="@color/colorFabs"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fullScreenTaskAction"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</RelativeLayout>

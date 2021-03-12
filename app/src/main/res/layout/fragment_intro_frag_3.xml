@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/frag_3_intro_Head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Emails"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/frag_3_intro_sub_Head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Schedule Emails like never before"
+        android:textColor="@color/color_yellow"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/frag_3_intro_imgview"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/intro_3_image" />
+
+    <TextView
+        android:id="@+id/frag_3_intro_explain_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="Emails created here are sent automatically to recipient on designated day and time"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="This feature can be used after giving google app password. As simple as that"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="10sp"
+        android:gravity="bottom"
+        android:text="More information on app password is provided in Settings"
+        android:textColor="@color/color_yellow"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

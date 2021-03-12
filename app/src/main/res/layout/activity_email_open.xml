@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    android:scrollbars="vertical"
+    tools:context=".email.ScheduleEmail">
+
+    <RelativeLayout
+        android:id="@+id/Open_email_appBar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <ImageButton
+            android:id="@+id/Open_email_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorPrimaryDark"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Email"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/Open_email_back_btn"
+            android:layout_toRightOf="@id/Open_email_back_btn"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp" />
+
+        <ImageButton
+            android:id="@+id/Open_email_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu"
+            android:background="@android:color/transparent"
+            android:tint="@color/colorPrimaryDark"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:isScrollContainer="true"
+        android:layout_below="@id/Open_email_appBar_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/Open_email_main_rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:id="@+id/Open_email_task_app_bar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="56dp"-->
+<!--            android:background="@color/colorPrimaryDark">-->
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="100"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageButton-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:layout_marginRight="25dp"-->
+<!--                    android:layout_weight="15"-->
+<!--                    android:background="@color/colorPrimaryDark"-->
+<!--                    android:src="@drawable/ic_back" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginRight="25dp"-->
+<!--                    android:layout_weight="50"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:text="Edit Email"-->
+<!--                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"-->
+<!--                    android:textColor="@android:color/white" />-->
+
+<!--                <Button-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="end"-->
+<!--                    android:layout_marginRight="15dp"-->
+<!--                    android:layout_weight="25"-->
+<!--                    android:background="@drawable/search_bar_border"-->
+<!--                    android:text="Set"-->
+<!--                    android:textColor="@color/colorPrimaryDark" />-->
+
+<!--            </LinearLayout>-->
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:scrollbars="vertical"
+            tools:context=".ScheduleEmail">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/from_ScheduleEmail"
+                android:textColor="@color/colorInversePrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:fontFamily="@font/poppins_medium" />
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:orientation="horizontal"-->
+            <!--                    android:paddingLeft="5dp"-->
+            <!--                    android:paddingRight="5dp">-->
+
+            <TextView
+                android:id="@+id/Open_email_task_from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="@string/email_id_of_sender_ScheduleEmail"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/poppins_semibold"
+                android:textIsSelectable="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+            </LinearLayout>
+            <!--                    <Button-->
+            <!--                        android:id="@+id/email_act_default_email_btn"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginLeft="5dp"-->
+            <!--                        android:layout_marginRight="1dp"-->
+            <!--                        android:text="Use Default"-->
+            <!--                        android:textColor="@color/colorPrimaryDark" />-->
+
+            <!--            </LinearLayout>-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/text_view_email"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:paddingBottom="16dp"-->
+            <!--                    android:text="Countries"-->
+            <!--                    android:textSize="20sp" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/to_ScheduleEmail"
+                android:textColor="@color/colorInversePrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:fontFamily="@font/poppins_medium" />
+
+            <EditText
+                android:id="@+id/Open_email_task_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorInversePrimary"
+                android:hint="@string/email_id_of_receiver_ScheduleEmail"
+                android:fontFamily="@font/poppins_semibold"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"/>
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/text_view_emails"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:paddingBottom="16dp"-->
+            <!--                    android:text="Countries"-->
+            <!--                    android:textSize="20sp" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/subject_ScheduleEmail"
+                android:textColor="@color/colorInversePrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:fontFamily="@font/poppins_medium" />
+
+            <EditText
+                android:id="@+id/Open_email_task_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorInversePrimary"
+                android:hint="@string/subjectEditTxt_ScheduleEmail"
+                android:inputType="textEmailSubject"
+                android:fontFamily="@font/poppins_semibold"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/message_ScheduleEmail"
+                android:textColor="@color/colorInversePrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:fontFamily="@font/poppins_medium" />
+
+            <EditText
+                android:id="@+id/Open_email_task_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorInversePrimary"
+                android:gravity="start|top"
+                android:hint="@string/message_ScheduleEmail"
+                android:isScrollContainer="true"
+                android:scrollbars="vertical"
+                android:fontFamily="@font/poppins_semibold"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/date_ScheduleEmail"
+                android:textColor="@color/colorInversePrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:fontFamily="@font/poppins_medium"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/Open_email_task_date_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/Open_email_task_calendar_btn"
+                    android:layout_toLeftOf="@id/Open_email_task_calendar_btn"
+                    android:gravity="start|top"
+                    android:hint="@string/dateEditTxt_ScheduleEmail"
+                    android:textColor="@color/colorInversePrimary"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_medium" />
+
+                <Button
+                    android:id="@+id/Open_email_task_calendar_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/show_calendar_btn_ScheduleEmail"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/poppins_semibold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/time_ScheduleEmail"
+                android:textColor="@color/colorInversePrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:fontFamily="@font/poppins_medium" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/Open_email_task_time_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/Open_email_task_timePicker_btn"
+                    android:layout_toLeftOf="@id/Open_email_task_timePicker_btn"
+                    android:gravity="start|top"
+                    android:hint="@string/timeEditTxt_ScheduleEmail"
+                    android:textColor="@color/colorInversePrimary"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_medium" />
+
+                <Button
+                    android:id="@+id/Open_email_task_timePicker_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/set_time_btn_ScheduleEmail"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/poppins_semibold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Open_email_main_time_lin_layout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:background="@color/colorPrimary">
+
+
+        <TimePicker
+            android:id="@+id/Open_email_task_timepicker"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_medium" />
+
+        <Button
+            android:id="@+id/Open_email_task_timepicker_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Open_email_task_timepicker"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"
+            android:text="@string/close_ScheduleEmail"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"/>
+
+        <Button
+            android:id="@+id/Open_email_task_timepicker_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Open_email_task_timepicker"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:text="Save"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Open_email_main_date_lin_layout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/colorPrimary"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+        <DatePicker
+            android:id="@+id/Open_email_task_datepicker"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_medium" />
+
+        <Button
+            android:id="@+id/Open_email_task_datepicker_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Open_email_task_datepicker"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"
+            android:text="@string/close_ScheduleEmail"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/poppins_semibold" />
+
+        <Button
+            android:id="@+id/Open_email_task_datepicker_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Open_email_task_datepicker"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:text="Save"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppins_semibold" />
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/Open_email_task_discard_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:padding="10dp"
+        android:text="@string/cancel_ScheduleEmail"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/poppins_semibold"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/Open_email_main_rel_layout"
+        android:layout_marginStart="15dp" />
+
+    <Button
+        android:id="@+id/Open_email_task_send_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="10dp"
+        android:text="@string/save_and_schedule_ScheduleEmail"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/poppins_semibold"
+        android:background="@android:color/transparent"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@id/Open_email_main_rel_layout" />
+
+</RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

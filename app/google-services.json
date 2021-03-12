@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "892215615006",
+    "firebase_url": "https://schedule-manager-v2120.firebaseio.com",
+    "project_id": "schedule-manager-v2120",
+    "storage_bucket": "schedule-manager-v2120.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892215615006:android:a52753c9ac9efc8793580f",
+        "android_client_info": {
+          "package_name": "com.example.schedulemanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892215615006-bfju7jf6vs6p7kouch2s8a1ohdss8jj6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.schedulemanager",
+            "certificate_hash": "f4214c5af4f1aa34ca045760aaeab921d46cadfa"
+          }
+        },
+        {
+          "client_id": "892215615006-37ajkn08mcdkk7ga9gopglsqbutpb24i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9VxBLZWZZxlHE2F14XAyedC2SAHI6puA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892215615006-37ajkn08mcdkk7ga9gopglsqbutpb24i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

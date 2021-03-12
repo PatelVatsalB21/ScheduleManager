@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_gray">#A1A1A1</color>
+    <color name="color_dark_gray">#BDBDBD</color>
+    <color name="color_light_white">#BFFFFFFF</color>
+    <color name="color_Primary_Dark_Light">#2954EF</color>
+
+    <color name="color1">#F1755B</color>
+    <color name="color2">#66DF67</color>
+    <color name="color3">#F66398</color>
+    <color name="color4">#EEBE5C</color>
+    <color name="color5">#3799f4</color>
+    <color name="newColorAccent">#F2F2F2</color>
+    <color name="red">#DC0707</color>
+    <color name="colorBackground">#081C34</color>
+    <color name="cardview_dark">#062F45</color>
+    <color name="ic_note_icon_background">#FFFFFF</color>
+    <color name="ic_splash_screen">#FFFFFF</color>
+    <color name="dark">#02D5C8</color>
+
+    <color name="note_bg_color_1">#A6B8F8</color>
+    <color name="note_bg_color_2">#FDF8D0</color>
+    <color name="note_bg_color_3">#FAD5C9</color>
+    <color name="note_bg_color_4">#D3FFD0</color>
+    <color name="note_bg_color_5">#FBCEDD</color>
+    <color name="note_bg_color_6">#CFF3FF</color>
+    <color name="note_bg_color_7">#C2FAFB</color>
+    <color name="note_bg_color_8">#FFFFFF</color>
+
+    <color name="note_txt_color_1">#3F508F</color>
+    <color name="note_txt_color_2">#AFA767</color>
+    <color name="note_txt_color_3">#CC8169</color>
+    <color name="note_txt_color_4">#70C16A</color>
+    <color name="note_txt_color_5">#BF6A87</color>
+    <color name="note_txt_color_6">#61A5BC</color>
+    <color name="note_txt_color_7">#70BABC</color>
+    <color name="note_txt_color_8">#15499E</color>
+
+    <color name="lightblack">#302C2C</color>
+    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorPrimaryDark">#15499E</color>
+    <color name="colorAccent">#15499E</color>
+    <color name="colorPurple">#1D2A75</color>
+    <color name="colorFabs">#FFFFFF</color>
+    <color name="colorInversePrimary">#000000</color>
+    <color name="HeaderGradientMidColor">#AABEE3</color>
+    <color name="NavGradientBottomColor">#1A3057</color>
+    <color name="color_yellow">#EEBE5C</color>
+    <color name="black">#302C2C</color>
+    <color name="topHomePage">#FFFFFF</color>
+
+    <color name="SuccessBG">#E0FFDC</color>
+    <color name="taskDullBG">#B9CFDA</color>
+    <color name="taskBG">#E0F5FF</color>
+    <color name="emailBG">#E1E4FA</color>
+    <color name="dullText">#ACACAC</color>
+    <color name="light_blue_50">#FFE1F5FE</color>
+    <color name="light_blue_200">#FF81D4FA</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Green_txt">#267A29</color>
+    <color name="Green_bg">#E6FFE6</color>
+    <color name="Violet_txt">#2F387A</color>
+    <color name="Violet_bg">#E1E4FA</color>
+    <color name="Yellow_Dark_txt">#EAA33A</color>
+    <color name="Yellow_Dark_bg">#FFF0DE</color>
+    <color name="Green_new_txt">#47b564</color>
+    <color name="Green_new_bg">#d4f9dd</color>
+    <color name="Violet_new_txt">#4E40A6</color>
+    <color name="Violet_new_bg">#dcd9fc</color>
+    <color name="Yellow_new_Dark_txt">#f6a75a</color>
+    <color name="Yellow_new_bg">#f8eee4</color>
+    <color name="Pink_new_Dark_txt">#f5398c</color>
+    <color name="Pink_new_bg">#f8e6ee</color>
+    <color name="Blue_new_bg">#E1F6FF</color>
+    <color name="Blue_new_dull_bg">#BFDDEA</color>
+    <color name="Blue_new_txt">#3EC5FF</color>
+    <color name="Blue_new_dull_txt">#349ECC</color>
+
+</resources>

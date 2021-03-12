@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageButton
+            android:id="@+id/Setting_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Settings"
+            android:textSize="22sp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="20sp"
+            app:autoSizeMaxTextSize="24sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_semibold"/>
+
+        <RelativeLayout
+            android:id="@+id/Setting_Main_rel_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Setting_back_btn"
+            android:layout_margin="10dp">
+
+            <!--        <ImageView-->
+            <!--            android:id="@+id/Setting_profileImageView"-->
+            <!--            android:layout_width="150dp"-->
+            <!--            android:layout_height="150dp"-->
+            <!--            android:layout_marginTop="24dp"-->
+            <!--            android:src="@drawable/ic_user_account"-->
+            <!--            android:layout_centerHorizontal="true"/>-->
+
+            <!--        <View-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginLeft="15dp"-->
+            <!--            android:layout_marginRight="15dp"-->
+            <!--            android:background="@drawable/decoration_line_for_items"/>-->
+
+            <RelativeLayout
+                android:id="@+id/Setting_User_Rel_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/Settings_user_image"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/profile_img_decoration"
+                    android:backgroundTint="@color/colorPrimaryDark" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@id/Settings_user_image"
+                    android:layout_toRightOf="@id/Settings_user_image"
+                    android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/Setting_User_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sample_Settings"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="22sp"
+                    app:autoSizeMaxTextSize="26sp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <TextView
+                    android:id="@+id/Setting_below_username_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit your Profile"
+                    android:textSize="14sp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeMaxTextSize="16sp"
+                    android:fontFamily="@font/poppins_medium" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/Settings_User_Profile_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/colorPrimaryDark"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_arrow_forward" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/Setting_decoration_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/decoration_line_for_items"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_below="@id/Setting_User_Rel_Layout"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/Settings_dark_mode_switch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/Setting_decoration_1"
+                android:text="Dark Mode"
+                android:textSize="18sp"
+                android:textColor="@color/colorInversePrimary"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="18sp"
+                android:tint="@color/colorPrimaryDark"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_medium"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/Setting_Assistive_Notification_Bar_Switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Settings_dark_mode_switch"
+                android:layout_marginTop="10dp"
+                android:text="@string/assistive_notification_bar_Settings"
+                android:textColor="@color/colorInversePrimary"
+                android:textSize="18sp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="16sp"
+                app:autoSizeMaxTextSize="20sp"
+                android:tint="@color/colorPrimaryDark"
+                android:fontFamily="@font/poppins_medium" />
+
+<!--            <Spinner-->
+<!--                android:id="@+id/Setting_Quick_Note_Color_Spinner"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/Setting_Assistive_Notification_Bar_Switch"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:layout_marginTop="25dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:foregroundTint="@color/colorPrimaryDark"/>-->
+
+            <TextView
+                android:id="@+id/Settings_Quick_Note_Selection_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Setting_Assistive_Notification_Bar_Switch"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/select_text_color_Settings"
+                android:textSize="18sp"
+                android:textColor="@color/colorInversePrimary"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="16sp"
+                app:autoSizeMaxTextSize="19sp"
+                android:fontFamily="@font/poppins_medium" />
+
+            <!--        <RelativeLayout-->
+            <!--            android:id="@+id/Setting_Quick_Note_Layout"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_below="@id/Setting_Assistive_Notification_Bar_Switch">-->
+            <!--        <TextView-->
+            <!--            android:id="@+id/Settings_Quick_Note_Color_Indicator_Heading"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:text="Quick Note Text Color"-->
+            <!--            android:textSize="22sp"-->
+            <!--            android:layout_toStartOf="@id/Settings_Quick_Note_Color_Indicator_Img_View"-->
+            <!--            android:layout_toLeftOf="@id/Settings_Quick_Note_Color_Indicator_Img_View"-->
+            <!--            android:layout_below="@id/Setting_Assistive_Notification_Bar_Switch" -->
+            <!--            android:layout_marginTop="15dp"/>-->
+            <!--        -->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/Settings_Quick_Note_Color_Indicator_Img_View"-->
+            <!--                android:layout_width="40dp"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_below="@id/Setting_Assistive_Notification_Bar_Switch"-->
+            <!--                android:layout_margin="10dp"-->
+            <!--                android:background="@drawable/quick_note_white_color"/>-->
+            <!--        <RelativeLayout-->
+            <!--            android:id="@+id/Setting_Quick_Note_Colors_Set_Layout"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_below="@id/Settings_Quick_Note_Color_Indicator_Heading"-->
+            <!--            android:layout_margin="15dp">-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/Settings_Quick_Note_Color_1_Heading"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="White"-->
+            <!--                android:textSize="22sp"-->
+            <!--                android:layout_toStartOf="@id/Settings_Quick_Note_Color_1_Img_View"-->
+            <!--                android:layout_toLeftOf="@id/Settings_Quick_Note_Color_1_Img_View"-->
+            <!--                android:layout_alignParentTop="true"-->
+            <!--                android:layout_margin="10dp"/>-->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/Settings_Quick_Note_Color_1_Img_View"-->
+            <!--                android:layout_width="40dp"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_alignParentTop="true"-->
+            <!--                android:layout_margin="10dp"-->
+            <!--                android:background="@drawable/quick_note_white_color"/>-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/Settings_Quick_Note_Color_2_Heading"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="Black"-->
+            <!--                android:textSize="22sp"-->
+            <!--                android:layout_toStartOf="@id/Settings_Quick_Note_Color_2_Img_View"-->
+            <!--                android:layout_toLeftOf="@id/Settings_Quick_Note_Color_2_Img_View"-->
+            <!--                android:layout_below="@id/Settings_Quick_Note_Color_1_Img_View"-->
+            <!--                android:layout_margin="10dp"/>-->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/Settings_Quick_Note_Color_2_Img_View"-->
+            <!--                android:layout_width="40dp"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_below="@id/Settings_Quick_Note_Color_1_Img_View"-->
+            <!--                android:layout_margin="10dp"-->
+            <!--                android:background="@android:color/black"/>-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/Settings_Quick_Note_Color_3_Heading"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="Gray"-->
+            <!--                android:textSize="22sp"-->
+            <!--                android:layout_toStartOf="@id/Settings_Quick_Note_Color_3_Img_View"-->
+            <!--                android:layout_toLeftOf="@id/Settings_Quick_Note_Color_3_Img_View"-->
+            <!--                android:layout_below="@id/Settings_Quick_Note_Color_2_Img_View"-->
+            <!--                android:layout_margin="10dp"/>-->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/Settings_Quick_Note_Color_3_Img_View"-->
+            <!--                android:layout_width="40dp"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_below="@id/Settings_Quick_Note_Color_2_Img_View"-->
+            <!--                android:layout_margin="10dp"-->
+            <!--                android:background="@color/color_light_white"/>-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/Settings_Quick_Note_Color_4_Heading"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="Yellow"-->
+            <!--                android:textSize="22sp"-->
+            <!--                android:layout_toStartOf="@id/Settings_Quick_Note_Color_4_Img_View"-->
+            <!--                android:layout_toLeftOf="@id/Settings_Quick_Note_Color_4_Img_View"-->
+            <!--                android:layout_below="@id/Settings_Quick_Note_Color_3_Img_View"-->
+            <!--                android:layout_margin="10dp"/>-->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/Settings_Quick_Note_Color_4_Img_View"-->
+            <!--                android:layout_width="40dp"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_below="@id/Settings_Quick_Note_Color_3_Img_View"-->
+            <!--                android:layout_margin="10dp"-->
+            <!--                android:background="@color/colorAccent"/>-->
+            <!--        </RelativeLayout>-->
+
+            <!--        </RelativeLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/Setting_App_Password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Settings_Quick_Note_Selection_txt"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Google App Password"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorInversePrimary"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="16sp"
+                    app:autoSizeMaxTextSize="20sp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/Settings_Back_Up_Settings_Main_Rel_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Setting_App_Password_layout"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/backup_settings_Settings"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorInversePrimary"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="16sp"
+                    app:autoSizeMaxTextSize="20sp"
+                    android:fontFamily="@font/poppins_medium" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Setting_Snooze_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Settings_Back_Up_Settings_Main_Rel_layout"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/Setting_Snooze_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Default Snooze Length"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorInversePrimary"
+                    android:layout_alignParentLeft="true"/>
+
+                <TextView
+                    android:id="@+id/Setting_Snooze_indicator_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:layout_marginRight="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Settings_Logout_Rel_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Setting_Snooze_layout"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/Setting_Logout_txt_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="Logout"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorInversePrimary"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="16sp"
+                    app:autoSizeMaxTextSize="20sp"
+                    android:fontFamily="@font/poppins_medium" />
+
+
+                <ImageButton
+                    android:id="@+id/Setting_Logout_logout_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="15dp"
+                    android:layout_margin="5dp"
+                    android:tint="@color/colorPrimaryDark"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_arrow_forward" />
+
+
+                <TextView
+                    android:id="@+id/Setting_Logout_email_txt_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorInversePrimary"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeMaxTextSize="16sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/Setting_Logout_txt_view"/>
+
+            </RelativeLayout>
+
+
+            <!--        <TextView-->
+            <!--            android:id="@+id/Settings_Account_Settings_txt_view"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_below="@id/Settings_Back_Up_Settings_Main_Rel_layout"            android:layout_marginTop="20dp"-->
+            <!--            android:text="@string/user_account_settings_Settings"-->
+            <!--            android:textSize="22sp" />-->
+
+            <!--        <RelativeLayout-->
+            <!--            android:id="@+id/Settings_Account_Settings_Main_Rel_Layout"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_below="@id/Settings_Account_Settings_txt_view"-->
+            <!--            android:layout_margin="10dp">-->
+
+            <!--        <RelativeLayout-->
+            <!--            android:id="@+id/Settings_Email_ID_Rel_layout"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginTop="15dp"-->
+            <!--            android:layout_alignParentTop="true">-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/Settings_Default_Email_ID_Heading"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="@string/default_email_id_Settings"-->
+            <!--                android:textSize="22sp"-->
+            <!--                android:layout_marginTop="5dp"/>-->
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/Settings_Default_Email_ID_Edit_Txt"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_toEndOf="@id/Settings_Default_Email_ID_Heading"-->
+            <!--                android:layout_toRightOf="@id/Settings_Default_Email_ID_Heading"-->
+            <!--                android:hint="@string/default_email_id_Settings"-->
+            <!--                android:layout_marginLeft="10dp"-->
+            <!--                android:layout_marginStart="10dp" />-->
+
+            <!--            <Button-->
+            <!--                android:id="@+id/Settings_Default_Email_ID_Update_btn"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="@string/update_email_id_Settings"-->
+            <!--                android:textColor="@color/colorPrimaryDark"-->
+            <!--                android:layout_below="@id/Settings_Default_Email_ID_Heading"-->
+            <!--                android:layout_centerHorizontal="true"-->
+            <!--                android:layout_marginTop="10dp"/>-->
+
+            <!--        </RelativeLayout>-->
+
+
+            <!--        <RelativeLayout-->
+            <!--            android:id="@+id/Settings_User_Password_Rel_layout"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_below="@id/Settings_Email_ID_Rel_layout"-->
+            <!--            android:layout_marginTop="15dp">-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/Settings_Default_Password_Heading"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="@string/new_password_update_Settings"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_toStartOf="@id/Settings_Default_Password_Edit_Txt"-->
+            <!--                android:layout_toLeftOf="@id/Settings_Default_Password_Edit_Txt"-->
+            <!--                />-->
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/Settings_Default_Password_Edit_Txt"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                 android:hint="@string/fill_new_password_Settings"-->
+            <!--                android:layout_marginLeft="10dp"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:layout_alignParentEnd="true" />-->
+
+            <!--            <Button-->
+            <!--                android:id="@+id/Settings_Default_Password_Update_btn"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="@string/update_password_Settings"-->
+            <!--                android:textColor="@color/colorPrimaryDark"-->
+            <!--                android:layout_below="@id/Settings_Default_Password_Heading"-->
+            <!--                android:layout_centerHorizontal="true"-->
+            <!--                android:layout_marginTop="10dp"/>-->
+
+            <!--        </RelativeLayout>-->
+            <!--        </RelativeLayout>-->
+
+
+            <!--        <Button-->
+            <!--            android:id="@+id/Setting_delete_account_btn"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_alignParentLeft="true"-->
+            <!--            android:layout_alignParentBottom="true"-->
+            <!--            android:layout_below="@id/Settings_Back_Up_Settings_Main_Rel_layout"-->
+            <!--            android:layout_margin="15dp"-->
+            <!--            android:text="@string/delete_account_Settings"-->
+            <!--            android:textColor="@color/colorPrimaryDark"-->
+            <!--            android:layout_alignParentStart="true" />-->
+
+            <!--        <Button-->
+            <!--            android:id="@+id/Setting_LogOut_btn"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_alignParentRight="true"-->
+            <!--            android:layout_alignParentBottom="true"-->
+            <!--            android:layout_below="@id/Settings_Back_Up_Settings_Main_Rel_layout"-->
+            <!--            android:layout_margin="15dp"-->
+            <!--            android:text="@string/log_out_Settings"-->
+            <!--            android:textColor="@color/colorPrimaryDark"-->
+            <!--            android:layout_alignParentEnd="true" />-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_centerInParent="true"
+            android:id="@+id/Setting_Snooze_Picker_layout"
+            android:visibility="gone"
+            android:padding="20dp"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Snooze Length"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/Setting_Snooze_lin_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:layout_centerInParent="true">
+
+            <NumberPicker
+                android:id="@+id/Setting_Snooze_minutePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:layout_alignParentLeft="true"
+                android:background="@android:color/transparent"/>
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Minutes"
+                 android:fontFamily="@font/poppins_medium"
+                 android:textSize="18sp"
+                 android:textColor="@color/colorInversePrimary"
+                 android:layout_gravity="center_vertical"
+                 android:layout_margin="10dp"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/Setting_Snooze_minutePicker_cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/close_NewTask"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_marginTop="90dp"
+                android:padding="10dp"
+                android:visibility="visible"
+                android:layout_below="@id/Setting_Snooze_lin_layout"
+                android:layout_alignParentLeft="true"/>
+
+
+            <Button
+                android:id="@+id/Setting_Snooze_minutePicker_save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save_NewTask"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_marginTop="90dp"
+                android:padding="10dp"
+                android:visibility="visible"
+                android:layout_below="@id/Setting_Snooze_lin_layout"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

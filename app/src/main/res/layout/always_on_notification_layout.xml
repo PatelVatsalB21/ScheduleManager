@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="64dp"
+    android:background="@android:color/transparent">
+
+<!--    <TextView-->
+<!--        android:id="@+id/Always_On_Notification_Title"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/app_name_SplashScreen"-->
+<!--        android:textSize="10dp"-->
+<!--        android:gravity="center_horizontal" />-->
+
+    <LinearLayout
+        android:id="@+id/Always_On_Notification_Icon_Lin_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:weightSum="10"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/Always_On_Notification_App_Logo"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="3"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_notes"/>
+
+        <LinearLayout
+            android:id="@+id/Always_On_Notification_Task_Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/Always_On_Notification_Task"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_todo_app_bar"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/Always_On_Notification_Task_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_Always_On_Notification"
+                android:textSize="10dp"
+                android:fontFamily="@font/poppins_medium"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Always_On_Notification_Notes_Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/Always_On_Notification_Notes"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_edit"
+                android:tint="@color/colorAccent"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/Always_On_Notification_Notes_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quick_note_Always_On_Notification"
+                android:textSize="10dp"
+                android:fontFamily="@font/poppins_medium"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Always_On_Notification_Email_Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/Always_On_Notification_Email"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_email"
+                android:tint="@color/colorAccent"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/Always_On_Notification_Email_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_Always_On_Notification"
+                android:textSize="10dp"
+                android:fontFamily="@font/poppins_medium"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

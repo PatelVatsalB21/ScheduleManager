@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?><!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/new_note_dialog_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/new_note_cancel_btn"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/ic_back"
+                android:tint="@color/colorPrimaryDark" />
+
+            <!--            <Button-->
+            <!--                android:id="@+id/new_note_save_btn"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:gravity="center"-->
+            <!--                android:paddingLeft="2dp"-->
+            <!--                android:paddingRight="2dp"-->
+            <!--                android:text="@string/save_NewNote"-->
+            <!--                android:textColor="#15499E"-->
+            <!--                android:backgroundTint="@color/color_8"/>-->
+
+            <TextView
+                android:id="@+id/new_note_created_time_txt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center_vertical|left"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/new_note_menu_btn"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="end"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/ic_menu"
+                android:tint="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/new_note_dialog_app_bar"
+        android:background="@color/colorPrimary">
+
+        <EditText
+            android:id="@+id/new_note_input_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:autoLink="email|web|map"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="@string/title_NewNote"
+            android:linksClickable="true"
+            android:maxLines="5"
+            android:textColor="@color/colorInversePrimary"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/new_note_input_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_note_input_title"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:autoLink="email|web|map"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="top"
+            android:hint="@string/body_NewNote"
+            android:isScrollContainer="true"
+            android:linksClickable="true"
+            android:scrollbars="vertical"
+            android:textColor="@color/colorInversePrimary"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/new_note_dummy_view"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            />
+
+        <ImageButton
+            android:id="@+id/new_note_undo_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/undo_selector"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/new_note_dummy_view"
+            android:layout_toStartOf="@+id/new_note_dummy_view"
+            android:padding="5dp"/>
+
+        <ImageButton
+            android:id="@+id/new_note_redo_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/redo_selector"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/new_note_dummy_view"
+            android:layout_toEndOf="@id/new_note_dummy_view"
+            android:padding="5dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+    <!--</LinearLayout>-->
+
+    <!--<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    app:cardBackgroundColor="@color/colorPrimaryDark"-->
+    <!--    app:cardElevation="15dp">-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/new_note_input_title"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:hint="Title" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/new_note_input_desc"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@id/new_note_input_title"-->
+    <!--            android:ems="10"-->
+    <!--            android:inputType="textMultiLine" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/new_note_save_btn"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@id/new_note_input_desc"-->
+    <!--            android:text="Save" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/new_note_cancel_btn"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@id/new_note_save_btn"-->
+    <!--            android:text="Cancel"-->
+
+    <!--            />-->
+
+
+    <!--    </RelativeLayout>-->
+    <!--</com.google.android.material.card.MaterialCardView>-->
