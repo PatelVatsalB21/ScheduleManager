@@ -29,15 +29,16 @@ public class Trash_frag_1 extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+            @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.trash_frag_1, container, false);
-        if(mContext == null) {
+        if (mContext == null) {
             mContext = container.getContext();
         }
-
         trash_task_rec_view = view.findViewById(R.id.trash_frag_1_rec_view);
         null_view = view.findViewById(R.id.trash_frag_1_null_View);
-        Fragment_3.NotesItemDecoration spacesItemDecoration = new Fragment_3.NotesItemDecoration(10);
+        Fragment_3.NotesItemDecoration spacesItemDecoration = new Fragment_3.NotesItemDecoration(
+                10);
 
         adapter = new Trash_Task_rec_adapter(mContext, UtilsArray_Trash.getTrash_tasks());
         trash_task_rec_view.setAdapter(adapter);
@@ -48,26 +49,17 @@ public class Trash_frag_1 extends Fragment {
         }
         adapter.notifyDataSetChanged();
         trashTaskNullViewUpdater(adapter);
-
         return view;
     }
 
-    public static void trashTaskNullViewUpdater(Trash_Task_rec_adapter adapter){
-        if(UtilsArray_Trash.getTrash_tasks()==null||UtilsArray_Trash.getTrash_tasks().size()==0||adapter.getItemCount()==0){
+    public static void trashTaskNullViewUpdater(Trash_Task_rec_adapter adapter) {
+        if (UtilsArray_Trash.getTrash_tasks() == null
+                || UtilsArray_Trash.getTrash_tasks().size() == 0 || adapter.getItemCount() == 0) {
             null_view.setVisibility(View.VISIBLE);
             trash_task_rec_view.setVisibility(View.INVISIBLE);
-        }else {
+        } else {
             null_view.setVisibility(View.INVISIBLE);
             trash_task_rec_view.setVisibility(View.VISIBLE);
         }
     }
-
-//    public static void trashTaskNullViewFinish(){
-//        if (null_view.getVisibility() == View.VISIBLE){
-//            null_view.setVisibility(View.INVISIBLE);
-//            trash_task_rec_view.setVisibility(View.VISIBLE);
-//        }
-//    }
-
-
 }

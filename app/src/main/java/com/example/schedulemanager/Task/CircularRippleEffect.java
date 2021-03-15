@@ -1,12 +1,16 @@
 package com.example.schedulemanager.Task;
 
+import static android.graphics.Paint.Style.FILL;
+import static android.graphics.PorterDuff.Mode.CLEAR;
+
+import static androidx.core.content.ContextCompat.getColor;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
 import android.util.Property;
@@ -15,10 +19,6 @@ import android.view.View;
 import com.example.schedulemanager.R;
 
 import butterknife.ButterKnife;
-
-import static android.graphics.Paint.Style.FILL;
-import static android.graphics.PorterDuff.Mode.CLEAR;
-import static androidx.core.content.ContextCompat.getColor;
 
 public class CircularRippleEffect extends View {
     private static final int ADDITIONAL_SIZE_TO_CLEAR_ANTIALIASING = 1;
@@ -48,7 +48,8 @@ public class CircularRippleEffect extends View {
                 0, 0);
 
         try {
-            rippleSize = typedArray.getDimensionPixelSize(R.styleable.CircularRippleEffect_rippleSize, 500);
+            rippleSize = typedArray.getDimensionPixelSize(
+                    R.styleable.CircularRippleEffect_rippleSize, 500);
         } finally {
             typedArray.recycle();
         }
@@ -81,7 +82,8 @@ public class CircularRippleEffect extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         tempCanvas.drawColor(Color.WHITE, CLEAR);
-        tempCanvas.drawCircle(getWidth() / 2, getHeight() / 2, outerCircleRadiusProgress * maxCircleSize, circlePaint);
+        tempCanvas.drawCircle(getWidth() / 2, getHeight() / 2,
+                outerCircleRadiusProgress * maxCircleSize, circlePaint);
         tempCanvas.drawCircle(getWidth() / 2, getHeight() / 2, innerCircleRadiusProgress
                 * (maxCircleSize + ADDITIONAL_SIZE_TO_CLEAR_ANTIALIASING), maskPaint);
         canvas.drawBitmap(tempBitmap, 0, 0, null);

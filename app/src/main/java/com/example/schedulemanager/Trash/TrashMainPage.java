@@ -17,21 +17,16 @@ public class TrashMainPage extends AppCompatActivity {
     public static HomePageViewPager TrashViewPager;
     public static TabLayout tabLayout;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trash_main_page);
-
         UtilsArray_Trash.initTrashArrays(TrashMainPage.this);
-
         TrashViewPager = findViewById(R.id.trash_Main_View_Pager);
         tabLayout = findViewById(R.id.trash_Main_View_Pager_tab_layout);
         setUpViewPager(TrashViewPager);
         TrashViewPager.setCurrentItem(0);
         tabLayout.setupWithViewPager(TrashViewPager);
-
     }
 
     private void setUpViewPager(ViewPager viewPager) {
@@ -42,19 +37,20 @@ public class TrashMainPage extends AppCompatActivity {
         viewPager.setAdapter(adapter);
     }
 
-    public static void TrashActionOn(){
+    public static void TrashActionOn() {
         TrashViewPager.setPagingEnabled(false);
         tabLayout.setVisibility(View.GONE);
     }
 
-    public static void TrashActionOff(){
+    public static void TrashActionOff() {
         TrashViewPager.setPagingEnabled(true);
         tabLayout.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(TrashMainPage.this, HomePage.class).putExtra("num",0).putExtra("nav", R.id.nav_home));
+        startActivity(new Intent(TrashMainPage.this, HomePage.class).putExtra("num", 0).putExtra(
+                "nav", R.id.nav_home));
         finish();
     }
 

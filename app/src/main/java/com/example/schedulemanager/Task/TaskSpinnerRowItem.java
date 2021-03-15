@@ -10,14 +10,6 @@ public class TaskSpinnerRowItem {
         Category = category;
     }
 
-    public Integer getLottieRes() {
-        return LottieRes;
-    }
-
-    public void setLottieRes(Integer lottieRes) {
-        LottieRes = lottieRes;
-    }
-
     public String getCategory() {
         return Category;
     }

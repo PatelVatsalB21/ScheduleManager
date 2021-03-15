@@ -22,7 +22,8 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
-public class Trash_Notes_rec_adapter extends RecyclerView.Adapter<Trash_Notes_rec_adapter.ViewHolder> {
+public class Trash_Notes_rec_adapter extends
+        RecyclerView.Adapter<Trash_Notes_rec_adapter.ViewHolder> {
 
     ArrayList<Notes> trashNotes = new ArrayList<>();
     Context context;
@@ -39,7 +40,8 @@ public class Trash_Notes_rec_adapter extends RecyclerView.Adapter<Trash_Notes_re
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.trash_note_layout, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.trash_note_layout,
+                null);
         ViewHolder holder = new ViewHolder(view);
         if (context == null) {
             context = parent.getContext();
@@ -51,95 +53,98 @@ public class Trash_Notes_rec_adapter extends RecyclerView.Adapter<Trash_Notes_re
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final String title = trashNotes.get(position).title;
         final String desc = trashNotes.get(position).desc;
-
         holder.card.bringToFront();
         holder.title.setText(title);
         holder.desc.setText(desc);
 
-        holder.card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (multiSelect) {
-                    selectItem(trashNotes.get(position), holder);
-                } else
-                    Toast.makeText(context, "Long press item for options", Toast.LENGTH_SHORT).show();
+        holder.card.setOnClickListener(view -> {
+            if (multiSelect) {
+                selectItem(trashNotes.get(position), holder);
+            } else {
+                Toast.makeText(context, "Long press item for options",
+                        Toast.LENGTH_SHORT).show();
             }
         });
 
-        holder.card.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                actionMode = ((AppCompatActivity) view.getContext()).startSupportActionMode(actionModeCallbacks);
-                selectItem(trashNotes.get(position), holder);
-                view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
-                return true;
-            }
+        holder.card.setOnLongClickListener(view -> {
+            actionMode = ((AppCompatActivity) view.getContext()).startSupportActionMode(
+                    actionModeCallbacks);
+            selectItem(trashNotes.get(position), holder);
+            view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY,
+                    HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
+            return true;
         });
 
         if (selectedItems.contains(trashNotes.get(position))) {
-            holder.card.setBackgroundColor(context.getResources().getColor(R.color.color_dark_gray));
+            holder.card.setBackgroundColor(
+                    context.getResources().getColor(R.color.color_dark_gray));
         } else {
             holder.card.setBackgroundColor(context.getResources().getColor(R.color.colorPrimary));
         }
     }
 
-    private final androidx.appcompat.view.ActionMode.Callback actionModeCallbacks = new androidx.appcompat.view.ActionMode.Callback() {
-        @Override
-        public boolean onCreateActionMode(androidx.appcompat.view.ActionMode actionMode, Menu menu) {
-            multiSelect = true;
-            TrashMainPage.TrashActionOn();
-            menu.add("Restore");
-            menu.add("Delete");
-            actionMode.setTitle(selectedItems.size() + " Selected");
-            return true;
-        }
-
-        @Override
-        public boolean onPrepareActionMode(androidx.appcompat.view.ActionMode actionMode, Menu menu) {
-            return false;
-        }
-
-        @Override
-        public boolean onActionItemClicked(androidx.appcompat.view.ActionMode actionMode, MenuItem item) {
-
-            if (item.getTitle() == "Restore") {
-                for (Notes intItem : selectedItems) {
-                    UtilsArraylist.AddToNote(intItem, context);
-                    trashNotes.remove(intItem);
+    private final androidx.appcompat.view.ActionMode.Callback actionModeCallbacks =
+            new androidx.appcompat.view.ActionMode.Callback() {
+                @Override
+                public boolean onCreateActionMode(androidx.appcompat.view.ActionMode actionMode,
+                        Menu menu) {
+                    multiSelect = true;
+                    TrashMainPage.TrashActionOn();
+                    menu.add("Restore");
+                    menu.add("Delete");
+                    actionMode.setTitle(selectedItems.size() + " Selected");
+                    return true;
                 }
-                notifyDataSetChanged();
-                UtilsArray_Trash.UpdateTrashNote(trashNotes, context);
-                Snackbar.make(Trash_frag_2.trash_notes_rec_view, "Notes restored successfully", Snackbar.LENGTH_SHORT).show();
 
-            } else if (item.getTitle() == "Delete") {
-
-                for (Notes intItem : selectedItems) {
-                    trashNotes.remove(intItem);
+                @Override
+                public boolean onPrepareActionMode(androidx.appcompat.view.ActionMode actionMode,
+                        Menu menu) {
+                    return false;
                 }
-                notifyDataSetChanged();
-                UtilsArray_Trash.UpdateTrashNote(trashNotes, context);
-                Snackbar.make(Trash_frag_2.trash_notes_rec_view, "Notes deleted successfully", Snackbar.LENGTH_SHORT).show();
 
-            }
-            actionMode.finish();
-            return true;
-        }
+                @Override
+                public boolean onActionItemClicked(androidx.appcompat.view.ActionMode actionMode,
+                        MenuItem item) {
+                    if (item.getTitle() == "Restore") {
+                        for (Notes intItem : selectedItems) {
+                            UtilsArraylist.AddToNote(intItem, context);
+                            trashNotes.remove(intItem);
+                        }
+                        notifyDataSetChanged();
+                        UtilsArray_Trash.UpdateTrashNote(trashNotes, context);
+                        Snackbar.make(Trash_frag_2.trash_notes_rec_view,
+                                "Notes restored successfully", Snackbar.LENGTH_SHORT).show();
 
-        @Override
-        public void onDestroyActionMode(androidx.appcompat.view.ActionMode actionMode) {
-            multiSelect = false;
-            selectedItems.clear();
-            TrashMainPage.TrashActionOff();
-            notifyDataSetChanged();
-        }
-    };
+                    } else if (item.getTitle() == "Delete") {
+
+                        for (Notes intItem : selectedItems) {
+                            trashNotes.remove(intItem);
+                        }
+                        notifyDataSetChanged();
+                        UtilsArray_Trash.UpdateTrashNote(trashNotes, context);
+                        Snackbar.make(Trash_frag_2.trash_notes_rec_view,
+                                "Notes deleted successfully", Snackbar.LENGTH_SHORT).show();
+
+                    }
+                    actionMode.finish();
+                    return true;
+                }
+
+                @Override
+                public void onDestroyActionMode(androidx.appcompat.view.ActionMode actionMode) {
+                    multiSelect = false;
+                    selectedItems.clear();
+                    TrashMainPage.TrashActionOff();
+                    notifyDataSetChanged();
+                }
+            };
 
 
     void selectItem(Notes item, ViewHolder holder) {
         if (multiSelect) {
             if (selectedItems.contains(item)) {
-
-                holder.card.setBackgroundColor(context.getResources().getColor(R.color.colorPrimary));
+                holder.card.setBackgroundColor(
+                        context.getResources().getColor(R.color.colorPrimary));
 
                 selectedItems.remove(item);
                 actionMode.setTitle(selectedItems.size() + " Selected");
@@ -151,13 +156,12 @@ public class Trash_Notes_rec_adapter extends RecyclerView.Adapter<Trash_Notes_re
                     selectedItems = new ArrayList<>();
                 }
                 selectedItems.add(item);
-                holder.card.setBackgroundColor(context.getResources().getColor(R.color.color_dark_gray));
+                holder.card.setBackgroundColor(
+                        context.getResources().getColor(R.color.color_dark_gray));
                 actionMode.setTitle(selectedItems.size() + " Selected");
             }
         }
-
     }
-
 
     @Override
     public int getItemCount() {
@@ -177,7 +181,6 @@ public class Trash_Notes_rec_adapter extends RecyclerView.Adapter<Trash_Notes_re
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView title, desc;
         RelativeLayout card;
-
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

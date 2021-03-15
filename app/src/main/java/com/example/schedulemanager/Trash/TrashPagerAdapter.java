@@ -17,7 +17,6 @@ public class TrashPagerAdapter extends FragmentStatePagerAdapter {
         super(fm, behavior);
     }
 
-
     public void addFragment(Fragment fragment){
         TrashFragmentList.add(fragment);
     }
