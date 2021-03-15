@@ -54,31 +54,24 @@ public class Trash_Email_rec_adapter extends RecyclerView.Adapter<Trash_Email_re
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Log.e("TRASHMAIL", String.valueOf(trashMails.size()));
         SimpleDateFormat d = new SimpleDateFormat("dd/MM/yyyy  hh:mm a");
         holder.time.setText(d.format(trashMails.get(position).cal.getTimeInMillis()));
         holder.subject.setText(trashMails.get(position).Subject);
         holder.to.setText(trashMails.get(position).To);
         holder.from.setText(trashMails.get(position).From);
 
-        holder.card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (multiSelect) {
-                    selectItem(trashMails.get(position), holder);
-                } else
-                    Toast.makeText(context, "Long press item for options", Toast.LENGTH_SHORT).show();
-            }
+        holder.card.setOnClickListener(view -> {
+            if (multiSelect) {
+                selectItem(trashMails.get(position), holder);
+            } else
+                Toast.makeText(context, "Long press item for options", Toast.LENGTH_SHORT).show();
         });
 
-        holder.card.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                actionMode = ((AppCompatActivity) view.getContext()).startSupportActionMode(actionModeCallbacks);
-                selectItem(trashMails.get(position), holder);
-                view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
-                return true;
-            }
+        holder.card.setOnLongClickListener(view -> {
+            actionMode = ((AppCompatActivity) view.getContext()).startSupportActionMode(actionModeCallbacks);
+            selectItem(trashMails.get(position), holder);
+            view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
+            return true;
         });
 
         if (selectedItems.contains(trashMails.get(position))) {
@@ -86,8 +79,6 @@ public class Trash_Email_rec_adapter extends RecyclerView.Adapter<Trash_Email_re
         } else {
             holder.card.setBackgroundColor(context.getResources().getColor(R.color.colorPrimary));
         }
-
-
     }
 
     private final androidx.appcompat.view.ActionMode.Callback actionModeCallbacks = new androidx.appcompat.view.ActionMode.Callback() {
@@ -108,7 +99,6 @@ public class Trash_Email_rec_adapter extends RecyclerView.Adapter<Trash_Email_re
 
         @Override
         public boolean onActionItemClicked(androidx.appcompat.view.ActionMode actionMode, MenuItem item) {
-
             if (item.getTitle() == "Restore") {
                 for (Email intItem : selectedItems) {
                     UtilsArray_Email.AddToMail(intItem, context);
@@ -120,16 +110,13 @@ public class Trash_Email_rec_adapter extends RecyclerView.Adapter<Trash_Email_re
                 adapter.notifyDataSetChanged();
                 UtilsArray_All.ReloadCategoryItems();
                 Snackbar.make(Trash_frag_3.trash_mail_rec_view,"Email restored successfully", Snackbar.LENGTH_SHORT ).show();
-
             } else if (item.getTitle() == "Delete") {
-
                 for (Email intItem : selectedItems) {
                     trashMails.remove(intItem);
                 }
                 notifyDataSetChanged();
                 UtilsArray_Trash.UpdateTrashMail(trashMails, context);
                 Snackbar.make(Trash_frag_3.trash_mail_rec_view,"Email deleted successfully", Snackbar.LENGTH_SHORT ).show();
-
             }
             actionMode.finish();
             return true;
@@ -144,13 +131,10 @@ public class Trash_Email_rec_adapter extends RecyclerView.Adapter<Trash_Email_re
         }
     };
 
-
     void selectItem(Email item, ViewHolder holder) {
         if (multiSelect) {
             if (selectedItems.contains(item)) {
-
                 holder.card.setBackgroundColor(context.getResources().getColor(R.color.colorPrimary));
-
                 selectedItems.remove(item);
                 actionMode.setTitle(selectedItems.size() + " Selected");
                 if (selectedItems.size() == 0) {
@@ -165,7 +149,6 @@ public class Trash_Email_rec_adapter extends RecyclerView.Adapter<Trash_Email_re
                 actionMode.setTitle(selectedItems.size() + " Selected");
             }
         }
-
     }
 
     @Override

@@ -102,10 +102,6 @@
             android:exported="false" />
 
         <service
-            android:name=".FloatingWidget"
-            android:enabled="true"
-            android:exported="false" />
-        <service
             android:name=".email.EmailService"
             android:enabled="true"
             android:exported="false" />

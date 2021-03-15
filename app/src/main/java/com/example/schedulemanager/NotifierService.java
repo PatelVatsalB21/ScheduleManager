@@ -10,12 +10,9 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.IBinder;
 import android.os.Vibrator;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
-
-import com.example.schedulemanager.Task.FullScreenTaskReminder;
 
 public class NotifierService extends Service {
     MediaPlayer player;
@@ -34,7 +31,6 @@ public class NotifierService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.e("NotifierService","Created");
         ring = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
         player = MediaPlayer.create(this, ring);
         player.setLooping(true);
@@ -48,13 +44,11 @@ public class NotifierService extends Service {
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC), 0);
         player.start();
         vibrator.vibrate(pattern, 0);
-        Log.e("NotifierService","Started Playing");
     }
 
 
     @Override
     public void onDestroy() {
-        Log.e("NotifierService","Destroyed");
         if (vibrator != null) vibrator.cancel();
         if (player != null) player.stop();
         if (notificationManager != null)notificationManager.cancel(1111);

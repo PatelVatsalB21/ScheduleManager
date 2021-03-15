@@ -42,7 +42,6 @@ public class BootReciever extends BroadcastReceiver {
                                 eintent.putExtra("position", eposition);
                                 PendingIntent ePendingIntent = PendingIntent.getBroadcast(context, (int) e.id, eintent, PendingIntent.FLAG_UPDATE_CURRENT);
                                 alarmManager.setExact(AlarmManager.RTC_WAKEUP, e.cal.getTimeInMillis(), ePendingIntent);
-//                                    UtilsArray_Email.AddToEmailIntent(context,new CustomPenInt(eposition,ePendingIntent));
                             }
                             eposition++;
                         }
@@ -60,10 +59,7 @@ public class BootReciever extends BroadcastReceiver {
                                 if (t.isRepeating) {
 
                                     List<Long> timeToWeeklyRings = Task.getTimeToWeeklyRings(t);
-//                                    for (long millis : timeToWeeklyRings) {
                                         alarmManager.setExact(AlarmManager.RTC_WAKEUP, timeToWeeklyRings.get(0), tPendingIntent);
-//                                    }
-//                                UtilsArray_Task.AddToTaskIntent(context,new CustomPenInt(tposition,tPendingIntent));
                                 } else {
                                     alarmManager.setExact(AlarmManager.RTC_WAKEUP, Task.getTimeToNextRing(t.calendar), tPendingIntent);
                                 }
@@ -72,7 +68,6 @@ public class BootReciever extends BroadcastReceiver {
                         }
 
                         if (UtilsArraylist.note != null && !UtilsArraylist.note.isEmpty()) {
-
                             int nposition = 0;
                             for (Notes n : UtilsArraylist.note) {
                                 if (n.calendar != null && n.EngagedAlarm && Notes.isNoteAheadOfTime(n.calendar)) {
@@ -81,43 +76,14 @@ public class BootReciever extends BroadcastReceiver {
                                     nintent.putExtra("position", nposition);
                                     PendingIntent nPendingIntent = PendingIntent.getBroadcast(context, (int) n.id, nintent, PendingIntent.FLAG_UPDATE_CURRENT);
                                     alarmManager.setExact(AlarmManager.RTC_WAKEUP, n.calendar.getTimeInMillis(), nPendingIntent);
-//                                UtilsArraylist.AddToNoteIntent(context,new CustomPenInt(nposition,nPendingIntent));
                                 }
                                 nposition++;
                             }
                         }
-
-//                    for (CustomPenInt i : UtilsArray_Email.emailPenInt) {
-//                        alarmManager.setExact(AlarmManager.RTC_WAKEUP, UtilsArray_Email.mail.get(i.position).cal.getTimeInMillis(), i.pendingIntent);
-//                    }
-//
-//                    for (CustomPenInt j : UtilsArray_Task.taskPendingIntent) {
-//                        List<Long> timeToWeeklyRings = Task.getTimeToWeeklyRings(UtilsArray_Task.task.get(j.position));
-//                        for (long millis : timeToWeeklyRings) {
-//                            alarmManager.setRepeating(
-//                                    AlarmManager.RTC_WAKEUP,millis,AlarmManager.INTERVAL_DAY * 7,j.pendingIntent);
-//                        }
-//                    }
-//
-//                    for (CustomPenInt k : UtilsArraylist.notesPendingIntents) {
-//                        alarmManager.setExact(AlarmManager.RTC_WAKEUP, UtilsArraylist.note.get(k.position).calendar.getTimeInMillis(), k.pendingIntent);
-//                    }
-
                         Fragment_4.checkPendingEmails(context);
-
-//                    if (Settings_Main.isAssitiveNotificationOn){
-//                        Settings_Main.createNotification(context);
-//                    }
                         Settings_Main.LoadChangedSettings(context);
-                        Log.d("BOOTUPRECEIVER", "Called");
-
-
                     }
                 }else if (intent.getBooleanExtra("NewUserAlarmCreation", false)) {
-//                        UtilsArray_Task.taskPendingIntent = new ArrayList<>();
-//                        UtilsArraylist.notesPendingIntents = new ArrayList<>();
-//                        UtilsArray_Email.emailPenInt = new ArrayList<>();
-
                         if (UtilsArray_Email.mail != null && !UtilsArray_Email.mail.isEmpty()) {
                             int eposition = 0;
                             for (Email e : UtilsArray_Email.mail) {
@@ -126,48 +92,36 @@ public class BootReciever extends BroadcastReceiver {
                                     eintent.putExtra("position", eposition);
                                     PendingIntent ePendingIntent = PendingIntent.getBroadcast(context, (int) e.id, eintent, PendingIntent.FLAG_UPDATE_CURRENT);
                                     alarmManager.setExact(AlarmManager.RTC_WAKEUP, e.cal.getTimeInMillis(), ePendingIntent);
-//                                    UtilsArray_Email.AddToEmailIntent(context,new CustomPenInt(eposition,ePendingIntent));
                                 }
                                 eposition++;
                             }
                         }
 
                     if (UtilsArray_Task.task != null && !UtilsArray_Task.task.isEmpty()) {
-
-                        int tposition = 0;
                         for (Task t : UtilsArray_Task.task) {
                             if (!t.isComplete && t.calendar != null && Task.isTaskAheadOfTime(t.calendar)) {
                                 Intent tintent = new Intent(context, TaskReceiver.class);
-                                tintent.putExtra("position", tposition);
                                 PendingIntent tPendingIntent = PendingIntent.getBroadcast(context, (int) t.id, tintent, PendingIntent.FLAG_UPDATE_CURRENT);
-
                                 if (t.isRepeating) {
-
                                     List<Long> timeToWeeklyRings = Task.getTimeToWeeklyRings(t);
                                     for (long millis : timeToWeeklyRings) {
                                         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, millis, AlarmManager.INTERVAL_DAY * 7, tPendingIntent);
                                     }
-//                                UtilsArray_Task.AddToTaskIntent(context,new CustomPenInt(tposition,tPendingIntent));
                                 } else {
                                     alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, Task.getTimeToNextRing(t.calendar), AlarmManager.INTERVAL_DAY * 7, tPendingIntent);
                                 }
-
-                                tposition++;
                             }
                         }
                     }
 
                         if (UtilsArraylist.note != null && !UtilsArraylist.note.isEmpty()) {
-
                             int nposition = 0;
                             for (Notes n : UtilsArraylist.note) {
                                 if (n.calendar != null && n.EngagedAlarm && Notes.isNoteAheadOfTime(n.calendar)) {
-
                                     Intent nintent = new Intent(context, AlarmReciever.class);
                                     nintent.putExtra("position", nposition);
                                     PendingIntent nPendingIntent = PendingIntent.getBroadcast(context, (int) n.id, nintent, PendingIntent.FLAG_UPDATE_CURRENT);
                                     alarmManager.setExact(AlarmManager.RTC_WAKEUP, n.calendar.getTimeInMillis(), nPendingIntent);
-//                                UtilsArraylist.AddToNoteIntent(context,new CustomPenInt(nposition,nPendingIntent));
                                 }
                                 nposition++;
                             }

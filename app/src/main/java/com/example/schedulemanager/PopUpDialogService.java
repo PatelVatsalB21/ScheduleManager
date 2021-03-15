@@ -1,7 +1,5 @@
 package com.example.schedulemanager;
 
-import android.app.Activity;
-import android.app.KeyguardManager;
 import android.app.Service;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -11,7 +9,6 @@ import android.graphics.Point;
 import android.os.Build;
 import android.os.IBinder;
 import android.provider.Settings;
-import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -37,12 +34,9 @@ public class PopUpDialogService extends Service {
     private WindowManager mWindowManager;
     private View mFloatingWidget;
     Point size;
-    EditText title, editText;
-    EditText desc;
+    EditText title, desc;
     TextView head;
-    Button dismiss;
-    Button save;
-    ClipboardManager manager;
+    Button dismiss, save;
 
     @Nullable
     @Override
@@ -55,11 +49,14 @@ public class PopUpDialogService extends Service {
         super.onCreate();
         Intent closeDrawerIntent = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
         PopUpDialogService.this.sendBroadcast(closeDrawerIntent);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(PopUpDialogService.this)) {
-            Toast.makeText(PopUpDialogService.this, "Draw over other apps permission denied", Toast.LENGTH_SHORT).show();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(
+                PopUpDialogService.this)) {
+            Toast.makeText(PopUpDialogService.this, "Draw over other apps permission denied",
+                    Toast.LENGTH_SHORT).show();
         } else {
 
-            mFloatingWidget = LayoutInflater.from(this).inflate(R.layout.activity_pop_up__dialog, null);
+            mFloatingWidget = LayoutInflater.from(this).inflate(R.layout.activity_pop_up__dialog,
+                    null);
             final WindowManager.LayoutParams params;
 
             int LAYOUT_FLAG;
@@ -81,9 +78,9 @@ public class PopUpDialogService extends Service {
             params.x = 0;
             params.y = 0;
 
-            params.flags =  WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON|
-                    WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD|
-                    WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED|
+            params.flags = WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON |
+                    WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD |
+                    WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED |
                     WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON;
 
 
@@ -111,12 +108,11 @@ public class PopUpDialogService extends Service {
                 head.setTextColor(getResources().getColor(Settings_Main.QuickNoteTextColor));
                 title.setTextColor(getResources().getColor(Settings_Main.QuickNoteTextColor));
                 title.setHintTextColor(getResources().getColor(Settings_Main.QuickNoteTextColor));
-                Log.e("QUICKNOTEPOPUPCOLOR", String.valueOf(Settings_Main.QuickNoteTextColor));
                 desc.setTextColor(getResources().getColor(Settings_Main.QuickNoteTextColor));
                 desc.setHintTextColor(getResources().getColor(Settings_Main.QuickNoteTextColor));
                 save.setTextColor(getResources().getColor(Settings_Main.QuickNoteTextColor));
                 dismiss.setTextColor(getResources().getColor(Settings_Main.QuickNoteTextColor));
-            }else{
+            } else {
                 Settings_Main.LoadChangedSettings(PopUpDialogService.this);
                 Settings_Main.QuickNoteTextColor = R.color.color_yellow;
                 Settings_Main.SaveSettings(PopUpDialogService.this);
@@ -124,51 +120,45 @@ public class PopUpDialogService extends Service {
 
             ClipboardManager manager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
 
-            title.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+            title.setOnClickListener(view -> {
 
-                    if (manager != null && manager.getPrimaryClip() != null && manager.getPrimaryClip().getItemCount() > 0) {
-                        title.append(manager.getPrimaryClip().getItemAt(0).getText().toString());
-                        Toast.makeText(PopUpDialogService.this, "Text Pasted Successfully", Toast.LENGTH_SHORT).show();
-                    }
+                if (manager != null && manager.getPrimaryClip() != null
+                        && manager.getPrimaryClip().getItemCount() > 0) {
+                    title.append(manager.getPrimaryClip().getItemAt(0).getText().toString());
+                    Toast.makeText(PopUpDialogService.this, "Text Pasted Successfully",
+                            Toast.LENGTH_SHORT).show();
                 }
             });
 
 
-            desc.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+            desc.setOnClickListener(view -> {
 
-                    if (manager != null && manager.getPrimaryClip() != null && manager.getPrimaryClip().getItemCount() > 0) {
-                        desc.append(manager.getPrimaryClip().getItemAt(0).getText().toString());
-                        Toast.makeText(PopUpDialogService.this, "Text Pasted Successfully", Toast.LENGTH_SHORT).show();
-                    }
+                if (manager != null && manager.getPrimaryClip() != null
+                        && manager.getPrimaryClip().getItemCount() > 0) {
+                    desc.append(manager.getPrimaryClip().getItemAt(0).getText().toString());
+                    Toast.makeText(PopUpDialogService.this, "Text Pasted Successfully",
+                            Toast.LENGTH_SHORT).show();
                 }
             });
 
-            title.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
-                    ClipData clipData = ClipData.newPlainText("text", title.getText().toString());
-                    if (manager != null) {
-                        manager.setPrimaryClip(clipData);
-                        Toast.makeText(PopUpDialogService.this, "Text copied to clipboard ", Toast.LENGTH_SHORT).show();
-                    }
-                    return true;
+            title.setOnLongClickListener(view -> {
+                ClipData clipData = ClipData.newPlainText("text", title.getText().toString());
+                if (manager != null) {
+                    manager.setPrimaryClip(clipData);
+                    Toast.makeText(PopUpDialogService.this, "Text copied to clipboard ",
+                            Toast.LENGTH_SHORT).show();
                 }
+                return true;
             });
 
-            desc.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
-                    ClipData clipData = ClipData.newPlainText("text", desc.getText().toString());
-                    if (manager != null) {
-                        manager.setPrimaryClip(clipData);
-                        Toast.makeText(PopUpDialogService.this, "Text copied to clipboard ", Toast.LENGTH_SHORT).show();
-                    }
-                    return true;
+            desc.setOnLongClickListener(view -> {
+                ClipData clipData = ClipData.newPlainText("text", desc.getText().toString());
+                if (manager != null) {
+                    manager.setPrimaryClip(clipData);
+                    Toast.makeText(PopUpDialogService.this, "Text copied to clipboard ",
+                            Toast.LENGTH_SHORT).show();
                 }
+                return true;
             });
 
             mFloatingWidget.setOnTouchListener(new View.OnTouchListener() {
@@ -204,79 +194,22 @@ public class PopUpDialogService extends Service {
                 }
             });
 
-            save.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Calendar calendar = Calendar.getInstance();
-                    UtilsArraylist.AddToNote(new Notes(System.currentTimeMillis(), title.getText().toString(), desc.getText().toString(), calendar, false, 7), PopUpDialogService.this);
-                    stopSelf();
-                }
+            save.setOnClickListener(view -> {
+                Calendar calendar = Calendar.getInstance();
+                UtilsArraylist.AddToNote(
+                        new Notes(System.currentTimeMillis(), title.getText().toString(),
+                                desc.getText().toString(), calendar, false, 7),
+                        PopUpDialogService.this);
+                stopSelf();
             });
 
-            dismiss.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    stopSelf();
-                }
-            });
-
+            dismiss.setOnClickListener(view -> stopSelf());
         }
     }
-        @Override
-        public void onDestroy () {
-            super.onDestroy();
-            if (mFloatingWidget != null) mWindowManager.removeView(mFloatingWidget);
-        }
 
-
-//    class copyPasteCallback implements ActionMode.Callback {
-//
-//        @Override
-//        public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-//            mode.getMenuInflater().inflate(R.menu.copy_paste_menu, menu);
-//             manager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-//            return true;
-//        }
-//
-//        @Override
-//        public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
-//            return false;
-//        }
-//
-//        @Override
-//        public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-//
-//            int id = item.getItemId();
-//            if(id == R.id.copy_paste_item_copy){
-//                int startSelection = editText.getSelectionStart();
-//                int endSelection = editText.getSelectionEnd();
-//
-//                String selectedText = editText.getText().toString().substring(startSelection, endSelection);
-//                ClipData clipData = ClipData.newPlainText("text", selectedText);
-//                if (manager != null) {
-//                    manager.setPrimaryClip(clipData);
-//                    Toast.makeText(getApplicationContext(), "Text Copied", Toast.LENGTH_SHORT).show();
-//                } else
-//                    Toast.makeText(getApplicationContext(), "No text to be copied", Toast.LENGTH_SHORT).show();
-//            }else if (id == R.id.copy_paste_item_paste){
-//                ClipData clipData = manager.getPrimaryClip();
-//                if (clipData != null) {
-//                    ClipData.Item clipitem = clipData.getItemAt(0);
-//                    editText.append(clipitem.getText().toString());
-//                    Toast.makeText(getApplicationContext(), "Text Pasted", Toast.LENGTH_SHORT).show();
-//
-//                } else
-//                    Toast.makeText(getApplicationContext(), "ClipBoard is empty", Toast.LENGTH_SHORT).show();
-//            }else mode.finish();
-//
-//
-//            return false;
-//        }
-//
-//        @Override
-//        public void onDestroyActionMode(ActionMode mode) {
-//
-//        }
-//    }
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (mFloatingWidget != null) mWindowManager.removeView(mFloatingWidget);
+    }
 }
