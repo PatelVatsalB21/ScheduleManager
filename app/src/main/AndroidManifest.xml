@@ -31,7 +31,6 @@
         android:roundIcon="@mipmap/ic_notes"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".note.CanvasActivity"></activity>
         <activity
             android:name=".email.AppPasswordSetupActivity"
             android:windowSoftInputMode="adjustPan" />

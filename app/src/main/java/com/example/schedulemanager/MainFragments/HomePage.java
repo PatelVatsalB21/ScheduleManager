@@ -9,10 +9,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.graphics.drawable.AnimatedVectorDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -53,14 +50,12 @@ import com.example.schedulemanager.NotifierService;
 import com.example.schedulemanager.R;
 import com.example.schedulemanager.Setting.AppPasswordActivity;
 import com.example.schedulemanager.Setting.Settings_Main;
-import com.example.schedulemanager.Task.FullScreenTaskReminder;
 import com.example.schedulemanager.Task.NewTask;
 import com.example.schedulemanager.Task.UtilsArray_Task;
 import com.example.schedulemanager.Trash.TrashMainPage;
 import com.example.schedulemanager.Trash.UtilsArray_Trash;
 import com.example.schedulemanager.email.ScheduleEmail;
 import com.example.schedulemanager.email.UtilsArray_Email;
-import com.example.schedulemanager.note.CanvasActivity;
 import com.example.schedulemanager.note.NewNoteAddDialog;
 import com.example.schedulemanager.note.UtilsArraylist;
 import com.google.android.material.bottomappbar.BottomAppBar;
@@ -840,16 +835,16 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
 //                break;
 
             case R.id.nav_about_us:
-                startActivity(new Intent(HomePage.this, CanvasActivity.class));
-//                AlertDialog.Builder builder = new AlertDialog.Builder(HomePage.this);
-//                builder.setTitle("About Us");
-//                builder.setMessage("Hey! Hoping that you are enjoying your Schedule Manager. This app is developed with purpose to help people organise their schedule and manage time in better way. If you are a developer and want to improve this app help us on github \n Follow Us on : ");
-//                builder.setNegativeButton("Dismiss", null);
-//
-//                AlertDialog dialog = builder.create();
-//                dialog.setCanceledOnTouchOutside(false);
-//                dialog.show();
-//                dialog.getButton(dialog.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+//                startActivity(new Intent(HomePage.this, CanvasActivity.class));
+                AlertDialog.Builder builder = new AlertDialog.Builder(HomePage.this);
+                builder.setTitle("About Us");
+                builder.setMessage("Hey! Hoping that you are enjoying your Schedule Manager. This app is developed with purpose to help people organise their schedule and manage time in better way. If you are a developer and want to improve this app help us on github \n Follow Us on : ");
+                builder.setNegativeButton("Dismiss", null);
+
+                AlertDialog dialog = builder.create();
+                dialog.setCanceledOnTouchOutside(false);
+                dialog.show();
+                dialog.getButton(dialog.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.colorPrimaryDark));
 
                 break;
 

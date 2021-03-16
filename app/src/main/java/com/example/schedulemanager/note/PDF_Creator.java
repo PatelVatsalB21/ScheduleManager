@@ -52,7 +52,6 @@ public class PDF_Creator {
             myPage.getCanvas().drawText(line, x, y, myPaint);
             y+=myPaint.descent()-myPaint.ascent();
         }
-
         myPdfDocument.finishPage(myPage);
         String dirPath = Environment.getExternalStorageDirectory().getPath() + "/Schedule Manager";
         File dir = new File(dirPath);
@@ -70,9 +69,7 @@ public class PDF_Creator {
             Toast.makeText(context, "Error in generating PDF file", Toast.LENGTH_SHORT).show();
             success = false;
         }
-
         myPdfDocument.close();
-
         if (success) Toast.makeText(context, "PDF saved to" + myFilePath, Toast.LENGTH_SHORT).show();
     }else Toast.makeText(context, "Permissions not granted", Toast.LENGTH_SHORT).show();
     }

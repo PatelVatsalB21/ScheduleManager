@@ -6,15 +6,15 @@ import java.util.Calendar;
 public class Notes {
 
     public long id;
-
-    public  String title;
+    public String title;
     public String desc;
     public Calendar calendar;
     public Calendar lastEdited;
     public Boolean EngagedAlarm;
     public Integer BackgroundColor;
 
-    public Notes(long id, String title, String desc, Calendar lastEdited, Boolean engagedAlarm, Integer backgroundColor) {
+    public Notes(long id, String title, String desc, Calendar lastEdited, Boolean engagedAlarm,
+            Integer backgroundColor) {
         this.id = id;
         this.title = title;
         this.desc = desc;
@@ -30,27 +30,6 @@ public class Notes {
     public void setId(long id) {
         this.id = id;
     }
-
-    public Integer getBackgroundColor() {
-        return BackgroundColor;
-    }
-
-    public void setBackgroundColor(Integer backgroundColor) {
-        BackgroundColor = backgroundColor;
-    }
-
-    public Boolean getEngagedAlarm() {
-        return EngagedAlarm;
-    }
-
-    public void setEngagedAlarm(Boolean engagedAlarm) {
-        EngagedAlarm = engagedAlarm;
-    }
-
-
-    //For updating note
-
-
 
     public Calendar getCalendar() {
         return calendar;
@@ -83,22 +62,17 @@ public class Notes {
         this.desc = desc;
     }
 
-    public static Boolean isNoteAheadOfTime(Calendar calGiven){
+    public static Boolean isNoteAheadOfTime(Calendar calGiven) {
         Calendar cal = Calendar.getInstance();
         return calGiven.compareTo(cal) > 0;
     }
 
-    public static Notes findNoteFromId(long id){
-
-        for (Notes n : UtilsArraylist.note){
-            if (n.id == id){
+    public static Notes findNoteFromId(long id) {
+        for (Notes n : UtilsArraylist.note) {
+            if (n.id == id) {
                 return n;
             }
         }
-
         return null;
     }
-
 }
-
-
