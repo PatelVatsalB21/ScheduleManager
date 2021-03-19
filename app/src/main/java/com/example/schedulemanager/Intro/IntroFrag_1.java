@@ -19,5 +19,4 @@ public class IntroFrag_1 extends Fragment {
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_intro_frag_1, container, false);
     }
-
 }
