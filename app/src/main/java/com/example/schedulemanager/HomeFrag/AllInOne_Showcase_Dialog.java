@@ -28,7 +28,7 @@ import java.util.Calendar;
 
 public class AllInOne_Showcase_Dialog extends DialogFragment {
 
-    TextView type, title , subject, message, time, typeOfTask , pendingWarning;
+    TextView type, title, subject, message, time, typeOfTask, pendingWarning;
     CheckBox repeat;
     LottieAnimationView lottie;
     Button back, edit;
@@ -36,8 +36,6 @@ public class AllInOne_Showcase_Dialog extends DialogFragment {
     LinearLayout weekDaysLinLayout;
     ToggleButton sun, mon, tue, wed, thu, fri, sat;
     ArrayList<All_In_One> AllInOne_Array = new ArrayList<>();
-    private Calendar calToday;
-
 
     public AllInOne_Showcase_Dialog(Integer ViewType, Integer pos, ArrayList<All_In_One> allList) {
         viewType = ViewType;
@@ -47,11 +45,11 @@ public class AllInOne_Showcase_Dialog extends DialogFragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+            @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.all_in_one_showcase_view_layout, container, false);
         type = view.findViewById(R.id.all_in_one_showcase_type_txt);
         title = view.findViewById(R.id.all_in_one_showcase_title);
-//        from = view.findViewById(R.id.all_in_one_showcase_from);
         subject = view.findViewById(R.id.all_in_one_showcase_subject);
         message = view.findViewById(R.id.all_in_one_showcase_message);
         time = view.findViewById(R.id.all_in_one_showcase_time);
@@ -74,30 +72,30 @@ public class AllInOne_Showcase_Dialog extends DialogFragment {
         SimpleDateFormat d = new SimpleDateFormat("dd/mm/yyyy hh:mm a");
         typeViewHider(viewType);
 
-        if (viewType == 1){
+        if (viewType == 1) {
             type.setText("Task");
-
             title.setText(AllInOne_Array.get(position).taskItem.getTitle());
-            if (AllInOne_Array.get(position).taskItem.isComplete){
-                time.setText("Task for: "+ d.format(AllInOne_Array.get(position).taskItem.calendar.getTimeInMillis()) +" completed");
+            if (AllInOne_Array.get(position).taskItem.isComplete) {
+                time.setText("Task for: " + d.format(AllInOne_Array.get(
+                        position).taskItem.calendar.getTimeInMillis()) + " completed");
+            } else {
+                time.setText("Set for: " + d.format(AllInOne_Array.get(
+                        position).taskItem.calendar.getTimeInMillis()));
             }
-            else {
-                time.setText("Set for: " + d.format(AllInOne_Array.get(position).taskItem.calendar.getTimeInMillis()));
-            }
-            typeOfTask.setText("Type of task: "+UtilsArray_Task.category.get(AllInOne_Array.get(position).taskItem.getLottieFileRes()).Category);
-            lottie.setAnimation(UtilsArray_Task.category.get(AllInOne_Array.get(position).taskItem.getLottieFileRes()).LottieRes);
+            typeOfTask.setText("Type of task: " + UtilsArray_Task.category.get(
+                    AllInOne_Array.get(position).taskItem.getLottieFileRes()).Category);
+            lottie.setAnimation(UtilsArray_Task.category.get(
+                    AllInOne_Array.get(position).taskItem.getLottieFileRes()).LottieRes);
 
             if (AllInOne_Array.get(position).taskItem.isRepeating) {
                 weekDaysLinLayout.setVisibility(View.VISIBLE);
                 repeat.setVisibility(View.VISIBLE);
                 repeat.setChecked(true);
-            }
-            else {
+            } else {
                 weekDaysLinLayout.setVisibility(View.GONE);
                 repeat.setVisibility(View.GONE);
                 repeat.setChecked(false);
             }
-
             sun.setChecked(AllInOne_Array.get(position).taskItem.weekDays.get(0));
             mon.setChecked(AllInOne_Array.get(position).taskItem.weekDays.get(1));
             tue.setChecked(AllInOne_Array.get(position).taskItem.weekDays.get(2));
@@ -105,77 +103,72 @@ public class AllInOne_Showcase_Dialog extends DialogFragment {
             thu.setChecked(AllInOne_Array.get(position).taskItem.weekDays.get(4));
             fri.setChecked(AllInOne_Array.get(position).taskItem.weekDays.get(5));
             sat.setChecked(AllInOne_Array.get(position).taskItem.weekDays.get(6));
-
-        }else {
-
+        } else {
             type.setText("Email");
             time.setText(d.format(AllInOne_Array.get(position).emailItem.cal.getTimeInMillis()));
-            if (AllInOne_Array.get(position).emailItem.Scheduled){
-                calToday = Calendar.getInstance();
-                if (AllInOne_Array.get(position).emailItem.cal.compareTo(calToday) < 0 &&AllInOne_Array.get(position).emailItem.Scheduled ){
+            if (AllInOne_Array.get(position).emailItem.Scheduled) {
+                Calendar calToday = Calendar.getInstance();
+                if (AllInOne_Array.get(position).emailItem.cal.compareTo(calToday) < 0
+                        && AllInOne_Array.get(position).emailItem.Scheduled) {
                     pendingWarning.setVisibility(View.VISIBLE);
-                    time.setText("Pending from: "+ d.format(AllInOne_Array.get(position).emailItem.cal.getTimeInMillis()));
-                }else {
+                    time.setText("Pending from: " + d.format(AllInOne_Array.get(
+                            position).emailItem.cal.getTimeInMillis()));
+                } else {
                     pendingWarning.setVisibility(View.GONE);
-                    time.setText("Scheduled for: "+ d.format(AllInOne_Array.get(position).emailItem.cal.getTimeInMillis()));
+                    time.setText("Scheduled for: " + d.format(AllInOne_Array.get(
+                            position).emailItem.cal.getTimeInMillis()));
                 }
-            }else {
-                time.setText("Sent at: "+ d.format(AllInOne_Array.get(position).emailItem.cal.getTimeInMillis()));
+            } else {
+                time.setText("Sent at: " + d.format(AllInOne_Array.get(
+                        position).emailItem.cal.getTimeInMillis()));
             }
-            if (!AllInOne_Array.get(position).emailItem.getSubject().isEmpty()){
+            if (!AllInOne_Array.get(position).emailItem.getSubject().isEmpty()) {
                 subject.setText(AllInOne_Array.get(position).emailItem.getSubject());
-            }else subject.setVisibility(View.GONE);
+            } else {
+                subject.setVisibility(View.GONE);
+            }
 
             if (!AllInOne_Array.get(position).emailItem.getMessage().isEmpty()) {
                 message.setText(AllInOne_Array.get(position).emailItem.getMessage());
-            }else message.setVisibility(View.GONE);
-
+            } else {
+                message.setVisibility(View.GONE);
+            }
             title.setText(AllInOne_Array.get(position).emailItem.getTo());
-//            from.setText(AllInOne_Array.get(position).emailItem.getFrom());
         }
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dismiss();
+        back.setOnClickListener(view1 -> dismiss());
+
+        edit.setOnClickListener(view12 -> {
+            Integer sendPosition;
+            if (viewType == 1) {
+                sendPosition = UtilsArray_Task.getTask().indexOf(
+                        AllInOne_Array.get(position).taskItem);
+                Intent i = new Intent(getContext(), TaskOpen.class);
+                i.putExtra("position", sendPosition);
+                getContext().startActivity(i);
+
+            } else {
+                sendPosition = UtilsArray_Email.getMail().indexOf(
+                        AllInOne_Array.get(position).emailItem);
+                Intent intent = new Intent(getContext(), Email_Open.class);
+                intent.putExtra("position", sendPosition);
+                getContext().startActivity(intent);
             }
+            dismiss();
         });
-
-        edit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Integer sendPosition;
-                if (viewType == 1){
-                    sendPosition = UtilsArray_Task.getTask().indexOf(AllInOne_Array.get(position).taskItem);
-                    Intent i = new Intent(getContext(), TaskOpen.class);
-                    i.putExtra("position", sendPosition);
-                    getContext().startActivity(i);
-
-                }else {
-                    sendPosition = UtilsArray_Email.getMail().indexOf(AllInOne_Array.get(position).emailItem);
-                    Intent intent = new Intent(getContext(), Email_Open.class);
-                    intent.putExtra("position", sendPosition);
-                    getContext().startActivity(intent);
-                }
-                dismiss();
-            }
-        });
-
         return view;
     }
 
-    public void typeViewHider(Integer type){
-        if (type == 1 ){
-//            from.setVisibility(View.GONE);
+    public void typeViewHider(Integer type) {
+        if (type == 1) {
             subject.setVisibility(View.GONE);
             message.setVisibility(View.GONE);
             pendingWarning.setVisibility(View.GONE);
-        }else if (type == 2){
+        } else if (type == 2) {
             typeOfTask.setVisibility(View.GONE);
             repeat.setVisibility(View.GONE);
             lottie.setVisibility(View.GONE);
             weekDaysLinLayout.setVisibility(View.GONE);
         }
-
     }
 }

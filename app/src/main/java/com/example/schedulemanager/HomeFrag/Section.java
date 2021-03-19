@@ -11,16 +11,8 @@ public class Section {
         return Head;
     }
 
-    public void setHead(String head) {
-        Head = head;
-    }
-
     public ArrayList<All_In_One> getItems() {
         return items;
-    }
-
-    public void setItems(ArrayList<All_In_One> items) {
-        this.items = items;
     }
 
     public Section() {
