@@ -1,4 +1,4 @@
-package com.example.schedulemanager.Task;
+package com.example.schedulemanager.CustomElements;
 
 import static android.graphics.Paint.Style.FILL;
 import static android.graphics.PorterDuff.Mode.CLEAR;

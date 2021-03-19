@@ -1,4 +1,4 @@
-package com.example.schedulemanager.note;
+package com.example.schedulemanager.Utils;
 
 import android.Manifest;
 import android.app.Activity;

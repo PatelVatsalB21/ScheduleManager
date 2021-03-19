@@ -10,7 +10,7 @@ import android.os.Build;
 import com.example.schedulemanager.HomeFrag.UtilsArray_All;
 import com.example.schedulemanager.R;
 import com.example.schedulemanager.email.EmailReceiver;
-import com.example.schedulemanager.note.GsonConverter;
+import com.example.schedulemanager.Utils.GsonConverter;
 
 import java.util.ArrayList;
 import java.util.Calendar;

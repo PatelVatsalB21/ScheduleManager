@@ -1,8 +1,9 @@
-package com.example.schedulemanager.note;
+package com.example.schedulemanager.Utils;
 
 import com.example.schedulemanager.Setting.Setting_Class;
 import com.example.schedulemanager.Task.Task;
 import com.example.schedulemanager.email.Email;
+import com.example.schedulemanager.note.Notes;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

@@ -2,7 +2,7 @@ package com.example.schedulemanager.Task;
 
 import static com.example.schedulemanager.Task.UtilsArray_Task.TasksharedPreferences;
 import static com.example.schedulemanager.Task.UtilsArray_Task.task;
-import static com.example.schedulemanager.note.GsonConverter.TaskToJson;
+import static com.example.schedulemanager.Utils.GsonConverter.TaskToJson;
 
 import static java.util.Calendar.DAY_OF_MONTH;
 import static java.util.Calendar.HOUR_OF_DAY;

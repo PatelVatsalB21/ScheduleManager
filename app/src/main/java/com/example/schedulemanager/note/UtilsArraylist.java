@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 import com.example.schedulemanager.R;
+import com.example.schedulemanager.Utils.GsonConverter;
 import com.example.schedulemanager.email.EmailReceiver;
 
 import java.util.ArrayList;

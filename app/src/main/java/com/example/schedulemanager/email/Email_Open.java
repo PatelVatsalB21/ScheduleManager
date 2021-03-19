@@ -32,7 +32,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.schedulemanager.HomeFrag.UtilsArray_All;
 import com.example.schedulemanager.MainFragments.HomePage;
 import com.example.schedulemanager.R;
-import com.example.schedulemanager.note.PDF_Creator;
+import com.example.schedulemanager.Utils.PDF_Creator;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.text.SimpleDateFormat;

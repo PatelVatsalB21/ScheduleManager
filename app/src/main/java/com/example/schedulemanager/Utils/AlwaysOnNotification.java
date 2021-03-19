@@ -1,4 +1,4 @@
-package com.example.schedulemanager;
+package com.example.schedulemanager.Utils;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -8,15 +8,16 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
-import android.util.Log;
 import android.widget.RemoteViews;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 import com.example.schedulemanager.MainFragments.HomePage;
+import com.example.schedulemanager.R;
 import com.example.schedulemanager.Setting.Settings_Main;
 import com.example.schedulemanager.Task.NewTask;
+import com.example.schedulemanager.Utils.PopUpDialogService;
 import com.example.schedulemanager.email.ScheduleEmail;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;

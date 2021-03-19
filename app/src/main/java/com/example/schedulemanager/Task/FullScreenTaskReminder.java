@@ -39,8 +39,9 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.example.schedulemanager.CustomElements.CircularRippleEffect;
 import com.example.schedulemanager.MainFragments.Fragment_2;
-import com.example.schedulemanager.NotifierService;
+import com.example.schedulemanager.Utils.NotifierService;
 import com.example.schedulemanager.R;
 import com.example.schedulemanager.Setting.Settings_Main;
 import com.example.schedulemanager.note.UtilsArraylist;

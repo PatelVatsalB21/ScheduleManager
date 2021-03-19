@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 
 import com.example.schedulemanager.Task.Task;
 import com.example.schedulemanager.email.Email;
-import com.example.schedulemanager.note.GsonConverter;
+import com.example.schedulemanager.Utils.GsonConverter;
 import com.example.schedulemanager.note.Notes;
 import com.example.schedulemanager.note.UtilsArraylist;
 

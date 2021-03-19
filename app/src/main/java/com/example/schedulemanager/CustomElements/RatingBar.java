@@ -1,4 +1,4 @@
-package com.example.schedulemanager.CustomRatingDialog;
+package com.example.schedulemanager.CustomElements;
 
 import static android.content.Context.MODE_PRIVATE;
 

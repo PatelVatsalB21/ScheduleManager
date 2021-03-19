@@ -1,4 +1,4 @@
-package com.example.schedulemanager.MainFragments;
+package com.example.schedulemanager.CustomElements;
 
 import android.content.Context;
 import android.util.AttributeSet;

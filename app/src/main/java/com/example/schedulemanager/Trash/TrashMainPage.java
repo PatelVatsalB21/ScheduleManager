@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.schedulemanager.MainFragments.HomePage;
-import com.example.schedulemanager.MainFragments.HomePageViewPager;
+import com.example.schedulemanager.CustomElements.HomePageViewPager;
 import com.example.schedulemanager.R;
 import com.google.android.material.tabs.TabLayout;
 

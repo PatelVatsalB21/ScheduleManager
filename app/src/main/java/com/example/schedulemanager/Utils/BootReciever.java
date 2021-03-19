@@ -1,4 +1,4 @@
-package com.example.schedulemanager;
+package com.example.schedulemanager.Utils;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;

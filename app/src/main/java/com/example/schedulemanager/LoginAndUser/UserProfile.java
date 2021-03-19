@@ -1,4 +1,4 @@
-package com.example.schedulemanager.LoginandUser;
+package com.example.schedulemanager.LoginAndUser;
 
 
 import androidx.annotation.RequiresApi;
@@ -37,7 +37,6 @@ import android.widget.Toast;
 
 import com.avatarfirst.avatargenlib.AvatarConstants;
 import com.avatarfirst.avatargenlib.AvatarGenerator;
-import com.example.schedulemanager.MainActivity;
 import com.example.schedulemanager.MainFragments.HomePage;
 import com.example.schedulemanager.R;
 import com.example.schedulemanager.Setting.Settings_Main;

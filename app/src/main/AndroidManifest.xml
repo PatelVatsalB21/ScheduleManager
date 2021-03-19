@@ -44,7 +44,7 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5383174024251490~2372192563" />
 
-        <activity android:name=".LoginandUser.SplashScreen">
+        <activity android:name=".LoginAndUser.SplashScreen">
             <intent-filter android:label="Firebase">
                 <action android:name="android.intent.action.MAIN" />
 
@@ -58,10 +58,10 @@
             android:name=".email.ScheduleEmail"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".LoginandUser.UserProfile"
+            android:name=".LoginAndUser.UserProfile"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".LoginandUser.Register"
+            android:name=".LoginAndUser.Register"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".note.Note_Open"
@@ -73,7 +73,7 @@
             android:name=".Task.NewTask"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".note.Timepicker" /> <!-- <activity android:name=".email.TimeEmailDialog" /> -->
-        <activity android:name=".MainActivity" /> <!-- <meta-data -->
+        <activity android:name=".LoginAndUser.MainActivity" /> <!-- <meta-data -->
         <!-- android:name="com.facebook.sdk.ApplicationId" -->
         <!-- android:value="@string/facebook_app_id" /> -->
         <!-- <activity -->
@@ -127,12 +127,12 @@
         <!-- android:resource="@xml/widget_info" /> -->
         <!-- </receiver> -->
         <receiver
-            android:name=".AlwaysOnNotification"
+            android:name=".Utils.AlwaysOnNotification"
             android:enabled="true"
             android:exported="false" />
 
         <service
-            android:name=".PopUpDialogService"
+            android:name=".Utils.PopUpDialogService"
             android:enabled="true" />
 
         <activity
@@ -140,7 +140,7 @@
             android:windowSoftInputMode="stateHidden" />
 
         <receiver
-            android:name=".BootReciever"
+            android:name=".Utils.BootReciever"
             android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -151,7 +151,7 @@
             android:showOnLockScreen="true"
             android:screenOrientation="sensorPortrait"/>
 
-        <service android:name=".NotifierService"
+        <service android:name=".Utils.NotifierService"
             android:enabled="true"/>
 
     </application>

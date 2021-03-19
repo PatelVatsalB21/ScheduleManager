@@ -1,4 +1,4 @@
-package com.example.schedulemanager;
+package com.example.schedulemanager.Utils;
 
 import android.app.Service;
 import android.content.ClipData;
@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import com.example.schedulemanager.R;
 import com.example.schedulemanager.Setting.Settings_Main;
 import com.example.schedulemanager.note.Notes;
 import com.example.schedulemanager.note.UtilsArraylist;

@@ -17,15 +17,15 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.schedulemanager.BootReciever;
+import com.example.schedulemanager.Utils.BootReciever;
 import com.example.schedulemanager.HomeFrag.UtilsArray_All;
-import com.example.schedulemanager.LoginandUser.SplashScreen;
+import com.example.schedulemanager.LoginAndUser.SplashScreen;
 import com.example.schedulemanager.MainFragments.Fragment_2;
 import com.example.schedulemanager.R;
 import com.example.schedulemanager.Task.UtilsArray_Task;
 import com.example.schedulemanager.email.Email_rec_Adapter;
 import com.example.schedulemanager.email.UtilsArray_Email;
-import com.example.schedulemanager.note.GsonConverter;
+import com.example.schedulemanager.Utils.GsonConverter;
 import com.example.schedulemanager.note.Notes_rec_Adapter;
 import com.example.schedulemanager.note.UtilsArraylist;
 import com.google.android.gms.tasks.OnFailureListener;

@@ -5,7 +5,7 @@
     android:id="@+id/Main_Drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LoginAndUser.MainActivity">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
@@ -237,7 +237,7 @@
             <!--                app:layout_constraintTop_toTopOf="parent" />-->
             <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-            <com.example.schedulemanager.MainFragments.HomePageViewPager
+            <com.example.schedulemanager.CustomElements.HomePageViewPager
                 android:id="@+id/Container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

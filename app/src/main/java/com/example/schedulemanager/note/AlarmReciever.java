@@ -14,7 +14,7 @@ import android.os.PowerManager;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import com.example.schedulemanager.NotifierService;
+import com.example.schedulemanager.Utils.NotifierService;
 import com.example.schedulemanager.R;
 
 

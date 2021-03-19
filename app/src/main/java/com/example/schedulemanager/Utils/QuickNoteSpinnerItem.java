@@ -1,4 +1,4 @@
-package com.example.schedulemanager;
+package com.example.schedulemanager.Utils;
 
 public class QuickNoteSpinnerItem {
 

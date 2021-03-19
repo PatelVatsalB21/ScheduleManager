@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 import com.example.schedulemanager.HomeFrag.UtilsArray_All;
-import com.example.schedulemanager.note.GsonConverter;
+import com.example.schedulemanager.Utils.GsonConverter;
 
 import java.util.ArrayList;
 import java.util.Calendar;
