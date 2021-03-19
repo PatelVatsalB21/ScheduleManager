@@ -1,11 +1,5 @@
 package com.example.schedulemanager.email;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -13,7 +7,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.JavascriptInterface;
-import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -23,6 +16,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.schedulemanager.MainFragments.HomePage;
 import com.example.schedulemanager.R;
 import com.example.schedulemanager.Setting.AppPasswordActivity;
@@ -30,7 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class AppPasswordSetupActivity extends AppCompatActivity {
 
-    RelativeLayout normal,no_connection;
+    RelativeLayout normal, no_connection;
     Button back, next, retry;
     ImageButton exit, one, two, three, four, five;
     TextView more_info, guide_text;
@@ -79,7 +75,8 @@ public class AppPasswordSetupActivity extends AppCompatActivity {
                             "y[4].click();" +
                             "var z = document.getElementsByClassName('whsOnd zHQkBf');" +
                             "z[0].click();" +
-                            "var a = document.getElementsByClassName('whsOnd zHQkBf');" + " a.setAttribute('value', 'Schedule Manager');");
+                            "var a = document.getElementsByClassName('whsOnd zHQkBf');"
+                            + " a.setAttribute('value', 'Schedule Manager');");
                 }
             }
 
@@ -90,80 +87,57 @@ public class AppPasswordSetupActivity extends AppCompatActivity {
 
         });
 
-        webView.addJavascriptInterface(new Object(){
+        webView.addJavascriptInterface(new Object() {
             @JavascriptInterface
-            public void performClick(String str){
+            public void performClick(String str) {
                 Toast.makeText(AppPasswordSetupActivity.this, str, Toast.LENGTH_SHORT).show();
             }
-        },"jgvuAb eZEHZc");
-
+        }, "jgvuAb eZEHZc");
         params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
         );
         params.setMargins(20, 0, 20, 0);
-
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (currentStep != 1) {
-                    stepSelector(currentStep - 1);
-                }
+        back.setOnClickListener(view -> {
+            if (currentStep != 1) {
+                stepSelector(currentStep - 1);
             }
         });
-
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (currentStep != 5) {
-                    stepSelector(currentStep + 1);
-                } else {
-                    startActivity(new Intent(AppPasswordSetupActivity.this, AppPasswordActivity.class).setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP));
-                    finish();
-                }
+        next.setOnClickListener(view -> {
+            if (currentStep != 5) {
+                stepSelector(currentStep + 1);
+            } else {
+                startActivity(new Intent(AppPasswordSetupActivity.this,
+                        AppPasswordActivity.class).setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                finish();
             }
         });
+        exit.setOnClickListener(view -> showExitDialog());
 
-        exit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showExitDialog();
-            }
-        });
+        more_info.setOnClickListener(view -> showInfoDialog());
 
-        more_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showInfoDialog();
-            }
-        });
-
-        retry.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                stepSelector(currentStep);
-            }
-        });
+        retry.setOnClickListener(view -> stepSelector(currentStep));
     }
-
 
     public void stepSelector(int num) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (connectivityManager.getActiveNetworkInfo()!=null&&connectivityManager.getActiveNetworkInfo().isConnected()) {
+            if (connectivityManager.getActiveNetworkInfo() != null
+                    && connectivityManager.getActiveNetworkInfo().isConnected()) {
                 no_connection.setVisibility(View.GONE);
                 normal.setVisibility(View.VISIBLE);
                 if (num == 1) {
                     currentStep = 1;
                     back.setEnabled(false);
-                    webView.loadUrl("https://myaccount.google.com/signinoptions/two-step-verification");
+                    webView.loadUrl(
+                            "https://myaccount.google.com/signinoptions/two-step-verification");
                     one.setImageDrawable(getResources().getDrawable(R.drawable.ic_one));
                     two.setImageDrawable(getResources().getDrawable(R.drawable.ic_two));
                     three.setImageDrawable(getResources().getDrawable(R.drawable.ic_three));
                     four.setImageDrawable(getResources().getDrawable(R.drawable.ic_four));
                     five.setImageDrawable(getResources().getDrawable(R.drawable.ic_five));
-                    guide_text.setText("Sign in with "+ mAuth.getCurrentUser().getEmail() +" and turn on 2 step verification");
+                    guide_text.setText("Sign in with " + mAuth.getCurrentUser().getEmail()
+                            + " and turn on 2 step verification");
                     next.setText("Next");
-
                 } else if (num == 2) {
                     currentStep = 2;
                     back.setEnabled(true);
@@ -173,9 +147,9 @@ public class AppPasswordSetupActivity extends AppCompatActivity {
                     three.setImageDrawable(getResources().getDrawable(R.drawable.ic_three));
                     four.setImageDrawable(getResources().getDrawable(R.drawable.ic_four));
                     five.setImageDrawable(getResources().getDrawable(R.drawable.ic_five));
-                    guide_text.setText("Sign in with "+ mAuth.getCurrentUser().getEmail() +" and click on select app and select OTHERS option");
+                    guide_text.setText("Sign in with " + mAuth.getCurrentUser().getEmail()
+                            + " and click on select app and select OTHERS option");
                     next.setText("Next");
-
                 } else if (num == 3) {
                     currentStep = 3;
                     back.setEnabled(true);
@@ -186,7 +160,6 @@ public class AppPasswordSetupActivity extends AppCompatActivity {
                     five.setImageDrawable(getResources().getDrawable(R.drawable.ic_five));
                     guide_text.setText("Write Schedule Manager");
                     next.setText("Next");
-
                 } else if (num == 4) {
                     currentStep = 4;
                     back.setEnabled(true);
@@ -197,7 +170,6 @@ public class AppPasswordSetupActivity extends AppCompatActivity {
                     five.setImageDrawable(getResources().getDrawable(R.drawable.ic_five));
                     guide_text.setText("Click on Generate button");
                     next.setText("Next");
-
                 } else if (num == 5) {
                     currentStep = 5;
                     back.setEnabled(true);
@@ -209,7 +181,7 @@ public class AppPasswordSetupActivity extends AppCompatActivity {
                     guide_text.setText("Copy 16 digit App Password and click on Finish button");
                     next.setText("Finish and Paste");
                 }
-            }else {
+            } else {
                 no_connection.setVisibility(View.VISIBLE);
                 normal.setVisibility(View.GONE);
             }
@@ -222,14 +194,12 @@ public class AppPasswordSetupActivity extends AppCompatActivity {
                 .setMessage("Without App Password you cannot use Schedule Email feature")
                 .setCancelable(false)
                 .setNegativeButton("Back to Setup", null)
-                .setPositiveButton("Exit", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(AppPasswordSetupActivity.this, HomePage.class).setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP));
-                        finish();
-                    }
+                .setPositiveButton("Exit", (dialogInterface, i) -> {
+                    startActivity(
+                            new Intent(AppPasswordSetupActivity.this, HomePage.class).setFlags(
+                                    Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                    finish();
                 });
-
         AlertDialog dialog = builder.create();
         dialog.setCanceledOnTouchOutside(false);
         dialog.show();
@@ -244,28 +214,26 @@ public class AppPasswordSetupActivity extends AppCompatActivity {
     private void showInfoDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(AppPasswordSetupActivity.this)
                 .setTitle("Google App Password")
-                .setMessage("This app password is required as a permission to add mails in respective Gmail account. This won't create any privacy issue. This password is not shared.")
+                .setMessage(
+                        "This app password is required as a permission to add mails in respective"
+                                + " Gmail account. This won't create any privacy issue. This "
+                                + "password is not shared.")
                 .setCancelable(false);
 
         AlertDialog dialog = builder.create();
-        dialog.setButton(DialogInterface.BUTTON_POSITIVE, "Dismiss", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialog.dismiss();
-            }
-        });
+        dialog.setButton(DialogInterface.BUTTON_POSITIVE, "Dismiss",
+                (dialogInterface, i) -> dialog.dismiss());
         dialog.show();
         dialog.getWindow().setTitleColor(getResources().getColor(R.color.colorPrimaryDark));
         Button yButton = dialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE);
         yButton.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
-
     }
 
     @Override
     public void onBackPressed() {
-        if (webView.canGoBack()){
+        if (webView.canGoBack()) {
             webView.goBack();
-        }else {
+        } else {
             showExitDialog();
         }
     }

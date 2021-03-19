@@ -6,12 +6,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Build;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.JobIntentService;
-
-import java.util.Calendar;
 
 public class EmailService extends JobIntentService {
 
@@ -19,20 +16,13 @@ public class EmailService extends JobIntentService {
 
     @Override
     protected void onHandleWork(@NonNull Intent intent) {
-
         if (intent.getExtras()!=null){
             networkOn = intent.getBooleanExtra("networkOn",false);
         }
-
-        Log.e("EMAILSERVICE","CALLED");
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-
         if (UtilsArray_Email.mail != null && !UtilsArray_Email.mail.isEmpty()) {
-
             for (Email e : UtilsArray_Email.getMail()) {
-                Calendar calendar = Calendar.getInstance();
                 if (e.Scheduled && e.cal.getTimeInMillis()<System.currentTimeMillis()) {
-
                     if (networkOn){
                         Intent i = new Intent(getApplicationContext(), EmailReceiver.class);
                         i.putExtra("id", e.id);
@@ -43,25 +33,17 @@ public class EmailService extends JobIntentService {
                     }
                     else {
                         ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-                        // ARE WE CONNECTED TO THE NET
                         if (conMgr.getActiveNetworkInfo() != null && conMgr.getActiveNetworkInfo().isAvailable() && conMgr.getActiveNetworkInfo().isConnected()) {
-
                             Intent i = new Intent(EmailService.this, EmailReceiver.class);
                             i.putExtra("id", e.id);
-//                    PendingIntent pendingIntent = PendingIntent.getBroadcast(EmailService.this, (int) e.id, i, PendingIntent.FLAG_UPDATE_CURRENT);
                             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                                 sendBroadcast(i);
-//                        alarmManager.setExact(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), pendingIntent);
                             }
                         }
                     }
-                    Log.e("EMAILSERVICE","SENDING");
-
                 }
             }
         }
-
-
     }
 }
 
