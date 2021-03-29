@@ -1,5 +1,5 @@
 # ScheduleManager
-Let's Inculcate the art of Scheduling
+**Let's Inculcate The Art Of Scheduling**⏰
 
 ## Introduction
 In this busy Schedule Of Life we always want a Manager that reminds and help us reduce the work. Schedule Manager can be your manager to reduce work by making **Flexible Tasks**, **Handy Notes** and **Conventional yet Scheduled Emails** all in one. It also comes with **Cloud Storage**, seamless experience on every device.
